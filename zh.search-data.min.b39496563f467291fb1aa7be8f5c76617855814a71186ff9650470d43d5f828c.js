@@ -1,27 +1,4 @@
-"use strict";(function(){const t={encode:!1,tokenize:function(e){return e.replace(/[\x00-\x7F]/g,"").split("")}};t.doc={id:"id",field:["title","content"],store:["title","href","section"]};const e=FlexSearch.create("balance",t);window.bookSearchIndex=e,e.add({id:0,href:"/missing/windows-11-optimization.html",title:"Windows 11 Optimization",section:"你缺失的那门计算机课",content:` Windows 11 修整指南 # 2021 年 10 月 5 日，微软发布了又新又好的 Windows 11。在那之后，许多品牌的笔记本电脑和台式机开始出厂即预装这款新系统，一些原本使用 Windows 10 的同学也在微软的蛊惑之下升级到了 Windows 11。
-一方面，Windows 11 在外观和部分使用体验上有着不小进步；但另一方面，Windows 11 在很多地方都让人「火大」——性能损失、花式 bug、部分操作反人类……为了让现阶段的 Windows 11 变得更好用一些，我们总结了一些对 Windows 11 系统进行「修整」的方法和技巧，以供大家参考使用。
-本章会持续更新，其中的内容会随着时间推移而有所增删。 注意：由于 Windows 更新频繁，这部分介绍的各种技巧都可能随时失效。 警告：这部分介绍的技巧中，有不少都需要更改系统底层的一些选项，若操作不当可能造成意料之外的后果，因而操作前请三思。 将任务栏按钮移到左下角 # 不同于以往的 Windows，Windows 11 的任务栏按钮默认在任务栏的正中间，就像这样：
-如同 Windows 8 时候的操作一般，这一改动收获了不少批评。于是，微软迅速更新了能够调整这个设置的菜单。右键单击任务栏，点选【任务栏设置】，找到【任务栏行为】，点开它，第一项就是【任务栏对齐选项】的设置，将它改成靠左即可。
-使用旧版右键菜单 # Windows 11 在「文件资源管理器」（包括桌面）中引入了一套新的右键菜单：
-这套新的右键菜单虽然相比旧式菜单略显美观，但在很多时候并不实用：先不说这个新式菜单的 bug（例如「属性」之下的选项在第一次唤出菜单时不见了），由于今天的大多数应用仍然没有接入这套新的菜单系统，很多时候我们不得不在右键后点选【显示更多选项】这一项来打开旧式菜单以找到我们需要的功能。
-大约在 2022 年 9 月末，微软发布了 Windows 11 版本 22H2 更新，新功能之一便是：在按住 Shift 时点击右键，就能直接唤出旧式右键菜单。这显然比之前方便不少，但还是有些捉襟见肘。因此，在新式菜单完全成熟之前，我们可以通过下面的方法来始终使用旧式菜单。
-设置的方法如下：
-按 Windows + X，选择【Windows 终端（管理员）】，然后选择【是】。（部分机器上称「Windows Powershell（管理员）」） 输入这行命令，然后按一次回车。重启后即见效果。 reg add &#34;HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32&#34; /f /ve 这样设置之后，在文件资源管理器（包括桌面）中右键，都将继续使用旧式菜单：
-如果需要返回新版菜单，使用下面这行命令：
-reg delete &#34;HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&#34; /f 使用旧版资源管理器 # 在 Windows 11 21H2 版本更新后，资源管理器变成了这样：
-曾经上方便捷的大按钮（或称「Ribbon 菜单」）已无影无踪，转而以 Windows 11 样式呈现。对已经习惯，甚至依赖旧式菜单那方便快捷操作的用户来说，这无疑是雪上加霜。不过，按照 Windows 一贯的兼容性，旧版资源管理器一定还在系统中。的确，不仅如此，甚至还有多种办法调出它。
-临时调出旧版资源管理器 # 临时调出旧版资源管理器的方法有一种类似「曲线救国」的感觉：
-打开资源管理器，点击地址栏第一个向右的箭头，选择【控制面板】；
-再如法炮制，这次选择【此电脑】；
-成了。
-永久使用旧版资源管理器 # 不同于使用旧版右键菜单，永久切换旧版资源管理器的操作复杂一些。转到【设置】→【系统】→【系统信息】，查看「Windows 规格」下的「版本」，不同的系统版本需要采用不同的操作。
-21H2 # 若版本是 21H2，操作就像上文的「使用旧版右键菜单」一样，只是把执行的命令换成以下这行，重启即可见效。
-reg add &#34;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked&#34; /f /v &#34;{e2bf9676-5f8f-435c-97eb-11607a5bedf7}&#34; 如果想恢复新版资源管理器，执行下面这行命令，依然是重启见效。
-reg delete &#34;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked&#34; /f /v &#34;{e2bf9676-5f8f-435c-97eb-11607a5bedf7}&#34; 22H2 及以上 # 适用于 22H2 及以上版本系统的方法不太一样：
-找一个你喜欢的地方，新建一个文件，命名为 ribbon.reg（注意，此文件的扩展名是 reg，记得预先将「显示文件扩展名」打开）； 用记事本打开刚刚的文件，写入以下内容，保存： Windows Registry Editor Version 5.00 [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}] @=&#34;CLSID_ItemsViewAdapter&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}\\InProcServer32] @=&#34;C:\\\\Windows\\\\System32\\\\Windows.UI.FileExplorer.dll_&#34; &#34;ThreadingModel&#34;=&#34;Apartment&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}] @=&#34;File Explorer Xaml Island View Adapter&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}\\InProcServer32] @=&#34;C:\\\\Windows\\\\System32\\\\Windows.UI.FileExplorer.dll_&#34; &#34;ThreadingModel&#34;=&#34;Apartment&#34; 关掉记事本，双击 ribbon.reg，点两下【是】，点【确定】； 用任务管理器重启文件资源管理器即可见效。 如果想回到新版的资源管理器，需要与之差不多的操作：
-找一个你喜欢的地方，新建一个文件，命名为 restore.reg（注意，此文件的扩展名是 reg，记得预先将「显示文件扩展名」打开）； 用记事本打开刚刚的文件，写入以下内容，保存： Windows Registry Editor Version 5.00 [-HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}] [-HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}] 关掉记事本，双击 restore.reg，点两下【是】，点【确定】； 用任务管理器重启文件资源管理器即可见效。 这两个文件可以一直留着，以备不时之需。
-此外，若不喜欢繁琐的操作，更简单的方法是求助于第三方软件，例如 ExplorerPatcher，不过它也附带了其他「回退到旧版」的功能，例如右键菜单或任务栏等，可以自行了解。
-`}),e.add({id:1,href:"/missing/office-and-wps.html",title:"Office 和 WPS——办公样样行",section:"你缺失的那门计算机课",content:` Office 和 WPS——办公样样行 # 欢迎来到《你缺计课》软件篇！在基础篇我们介绍了最最基本的电脑操作，例如文件管理和软件安装。而在软件篇中，我们会「介绍」一些软件。这里的「介绍」并不是教你怎么用这个软件，而是简要说明这个软件是干什么的、有什么特点，以及为什么我们会介绍它。请注意，《你缺失的那门计算机课》从来不是任何软件使用教程的替代品。 让我们从最常见的办公软件——Office，和它的相似物 WPS，来开始我们的软件篇旅程。在阅读完这一部分后，你能找到下面这些问题的答案：
+"use strict";(function(){const t={encode:!1,tokenize:function(e){return e.replace(/[\x00-\x7F]/g,"").split("")}};t.doc={id:"id",field:["title","content"],store:["title","href","section"]};const e=FlexSearch.create("balance",t);window.bookSearchIndex=e,e.add({id:0,href:"/missing/office-and-wps.html",title:"Office 和 WPS——办公样样行",section:"你缺失的那门计算机课",content:` Office 和 WPS——办公样样行 # 欢迎来到《你缺计课》软件篇！在基础篇我们介绍了最最基本的电脑操作，例如文件管理和软件安装。而在软件篇中，我们会「介绍」一些软件。这里的「介绍」并不是教你怎么用这个软件，而是简要说明这个软件是干什么的、有什么特点，以及为什么我们会介绍它。请注意，《你缺失的那门计算机课》从来不是任何软件使用教程的替代品。 让我们从最常见的办公软件——Office，和它的相似物 WPS，来开始我们的软件篇旅程。在阅读完这一部分后，你能找到下面这些问题的答案：
 下面五个名词之间的关系：Word、PowerPoint (简称 PPT)、Excel、Office、WPS。 Office 版本好多，我该选哪个？2003？2007？2019？ 为什么我电脑上自带的 Office 点开之后却打开了一个网页 / 购买链接？ Office 怎么装？ WPS 跟 Office 有什么区别？既然前者免费，那为什么还要后者？ 我们绝大多数人使用电脑，都逃不开「文档写作」「幻灯片制作」「表格处理」这么三件事。也许你早已会用 WPS，或者 Word、PPT 以及 Excel 这些再熟悉不过的软件来做这三件事，但这些软件背后的故事或许并不为你所知晓。
 仍然首先强调，这部分并不是一份 Office 软件教程。
 Microsoft Office # Microsoft Office 是由微软（也就是 Windows 系统它爹）开发的办公软件套装。称它「软件套装」，是因为 Microsoft Office 是一系列软件的组合，而非一个单个的软件。Microsoft Office 一般被人们直接简称为「Office」。Office 包含了一系列面向办公领域的软件。下面列出 Office 中的一些子软件：
@@ -56,7 +33,30 @@ WPS 的历史 # WPS 是由 金山公司 开发的国产免费软件。WPS 的历
 WPS 的使用 # 今天 WPS 的界面与近年新版 Office 软件的界面高度相似。下图是 WPS 文字 2019 版本的界面截图。对于大多数 Office 软件中的操作，WPS 中的操作方式都是相同或近似的。
 选择 WPS 的理由 # WPS 对 Office 文件格式有着高度的兼容性，这意味着在绝大多数情况下 WPS 都可以作为 Office 软件的替代品。同时，WPS 是免费软件。这意味着，你可以在没有任何额外成本的情况下合理合法地使用它，同时获得对 Office 文件格式的最大兼容度并保持 Office 的使用习惯。
 WPS 针对中国用户的使用习惯推出了一系列额外功能。WPS 有自己的模板库，称为「稻壳儿」。在稻壳儿中，你能找到各种各样的适合不同场景的文稿、幻灯片和表格模板，并将它们应用在自己的文档之中（可能需要额外付费）。在一些情况下，使用这些模板能够省时省力地制作出精美的文档。又比如，WPS 提供了自己的云服务平台（金山文档），借助金山文档能够实现多人协同编辑文件等高级功能。下图是「稻壳儿」中提供的部分模板。
-练习 # 你电脑上安装有 Office 吗？你能熟练地使用它们吗？你知道你所使用的 Office 软件的版本吗？ 你有使用 WPS 吗？如果有，试试探索「稻壳儿」模板商城。 前往电商平台查看一些笔记本电脑的商品详情，看看它们是否有将正版 Office 软件一并附赠。 `}),e.add({id:2,href:"/missing/afterwords.html",title:"跋",section:"你缺失的那门计算机课",content:` 跋 # 光阴似箭，日月如梭。眨眼间，我们就要大学毕业了，而《你缺失的那门计算机课》也已经诞生了两年有余。
+练习 # 你电脑上安装有 Office 吗？你能熟练地使用它们吗？你知道你所使用的 Office 软件的版本吗？ 你有使用 WPS 吗？如果有，试试探索「稻壳儿」模板商城。 前往电商平台查看一些笔记本电脑的商品详情，看看它们是否有将正版 Office 软件一并附赠。 `}),e.add({id:1,href:"/missing/windows-11-optimization.html",title:"Windows 11 修整指南",section:"你缺失的那门计算机课",content:` Windows 11 修整指南 # 2021 年 10 月 5 日，微软发布了又新又好的 Windows 11。在那之后，许多品牌的笔记本电脑和台式机开始出厂即预装这款新系统，一些原本使用 Windows 10 的同学也在微软的蛊惑之下升级到了 Windows 11。
+一方面，Windows 11 在外观和部分使用体验上有着不小进步；但另一方面，Windows 11 在很多地方都让人「火大」——性能损失、花式 bug、部分操作反人类……为了让现阶段的 Windows 11 变得更好用一些，我们总结了一些对 Windows 11 系统进行「修整」的方法和技巧，以供大家参考使用。
+本章会持续更新，其中的内容会随着时间推移而有所增删。 注意：由于 Windows 更新频繁，这部分介绍的各种技巧都可能随时失效。 警告：这部分介绍的技巧中，有不少都需要更改系统底层的一些选项，若操作不当可能造成意料之外的后果，因而操作前请三思。 将任务栏按钮移到左下角 # 不同于以往的 Windows，Windows 11 的任务栏按钮默认在任务栏的正中间，就像这样：
+如同 Windows 8 时候的操作一般，这一改动收获了不少批评。于是，微软迅速更新了能够调整这个设置的菜单。右键单击任务栏，点选【任务栏设置】，找到【任务栏行为】，点开它，第一项就是【任务栏对齐选项】的设置，将它改成靠左即可。
+使用旧版右键菜单 # Windows 11 在「文件资源管理器」（包括桌面）中引入了一套新的右键菜单：
+这套新的右键菜单虽然相比旧式菜单略显美观，但在很多时候并不实用：先不说这个新式菜单的 bug（例如「属性」之下的选项在第一次唤出菜单时不见了），由于今天的大多数应用仍然没有接入这套新的菜单系统，很多时候我们不得不在右键后点选【显示更多选项】这一项来打开旧式菜单以找到我们需要的功能。
+大约在 2022 年 9 月末，微软发布了 Windows 11 版本 22H2 更新，新功能之一便是：在按住 Shift 时点击右键，就能直接唤出旧式右键菜单。这显然比之前方便不少，但还是有些捉襟见肘。因此，在新式菜单完全成熟之前，我们可以通过下面的方法来始终使用旧式菜单。
+设置的方法如下：
+按 Windows + X，选择【Windows 终端（管理员）】，然后选择【是】。（部分机器上称「Windows Powershell（管理员）」） 输入这行命令，然后按一次回车。重启后即见效果。 reg add &#34;HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32&#34; /f /ve 这样设置之后，在文件资源管理器（包括桌面）中右键，都将继续使用旧式菜单：
+如果需要返回新版菜单，使用下面这行命令：
+reg delete &#34;HKCU\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&#34; /f 使用旧版资源管理器 # 在 Windows 11 21H2 版本更新后，资源管理器变成了这样：
+曾经上方便捷的大按钮（或称「Ribbon 菜单」）已无影无踪，转而以 Windows 11 样式呈现。对已经习惯，甚至依赖旧式菜单那方便快捷操作的用户来说，这无疑是雪上加霜。不过，按照 Windows 一贯的兼容性，旧版资源管理器一定还在系统中。的确，不仅如此，甚至还有多种办法调出它。
+临时调出旧版资源管理器 # 临时调出旧版资源管理器的方法有一种类似「曲线救国」的感觉：
+打开资源管理器，点击地址栏第一个向右的箭头，选择【控制面板】；
+再如法炮制，这次选择【此电脑】；
+成了。
+永久使用旧版资源管理器 # 不同于使用旧版右键菜单，永久切换旧版资源管理器的操作复杂一些。转到【设置】→【系统】→【系统信息】，查看「Windows 规格」下的「版本」，不同的系统版本需要采用不同的操作。
+21H2 # 若版本是 21H2，操作就像上文的「使用旧版右键菜单」一样，只是把执行的命令换成以下这行，重启即可见效。
+reg add &#34;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked&#34; /f /v &#34;{e2bf9676-5f8f-435c-97eb-11607a5bedf7}&#34; 如果想恢复新版资源管理器，执行下面这行命令，依然是重启见效。
+reg delete &#34;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked&#34; /f /v &#34;{e2bf9676-5f8f-435c-97eb-11607a5bedf7}&#34; 22H2 及以上 # 适用于 22H2 及以上版本系统的方法不太一样：
+找一个你喜欢的地方，新建一个文件，命名为 ribbon.reg（注意，此文件的扩展名是 reg，记得预先将「显示文件扩展名」打开）； 用记事本打开刚刚的文件，写入以下内容，保存： Windows Registry Editor Version 5.00 [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}] @=&#34;CLSID_ItemsViewAdapter&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}\\InProcServer32] @=&#34;C:\\\\Windows\\\\System32\\\\Windows.UI.FileExplorer.dll_&#34; &#34;ThreadingModel&#34;=&#34;Apartment&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}] @=&#34;File Explorer Xaml Island View Adapter&#34; [HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}\\InProcServer32] @=&#34;C:\\\\Windows\\\\System32\\\\Windows.UI.FileExplorer.dll_&#34; &#34;ThreadingModel&#34;=&#34;Apartment&#34; 关掉记事本，双击 ribbon.reg，点两下【是】，点【确定】； 用任务管理器重启文件资源管理器即可见效。 如果想回到新版的资源管理器，需要与之差不多的操作：
+找一个你喜欢的地方，新建一个文件，命名为 restore.reg（注意，此文件的扩展名是 reg，记得预先将「显示文件扩展名」打开）； 用记事本打开刚刚的文件，写入以下内容，保存： Windows Registry Editor Version 5.00 [-HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{2aa9162e-c906-4dd9-ad0b-3d24a8eef5a0}] [-HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{6480100b-5a83-4d1e-9f69-8ae5a88e9a33}] 关掉记事本，双击 restore.reg，点两下【是】，点【确定】； 用任务管理器重启文件资源管理器即可见效。 这两个文件可以一直留着，以备不时之需。
+此外，若不喜欢繁琐的操作，更简单的方法是求助于第三方软件，例如 ExplorerPatcher，不过它也附带了其他「回退到旧版」的功能，例如右键菜单或任务栏等，可以自行了解。
+`}),e.add({id:2,href:"/missing/afterwords.html",title:"跋",section:"你缺失的那门计算机课",content:` 跋 # 光阴似箭，日月如梭。眨眼间，我们就要大学毕业了，而《你缺失的那门计算机课》也已经诞生了两年有余。
 在过去的一年里，我们切切实实感受到了自己的文字正在帮助到更多的人——这是一种无法言喻的快乐。我们收到了很多读者的邮件，有提出建议的，有表达感谢的，甚至还有拿着自己写的稿件来投稿的。阅读这份教程的人，有的还在读中学，有的已经在职场奔波。我在更多地方看到了本教程的链接；而最近，本教程的 PDF 版本还被一些公众号转载。这让我们感到非常意外，也非常高兴。
 受限于我们的精力，《你缺计课》已经进入了一种慢速更新的状态。我们列出了一个长长的计划表，但是完成得非常缓慢。就算是回复大家的邮件，我们也常常拖延很久。但是，我们并没有放弃。我们仍然在继续写作，继续更新。我们的愿望没有改变：我们希望我们的文字能够帮助到更多的人。
 在这里，我们要感谢所有支持我们的人。感谢你们的鼓励，感谢你们的支持。《你缺计课》会和大家继续走下去。

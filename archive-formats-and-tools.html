@@ -22,12 +22,12 @@ Ask not what your country can do for you—ask what you can do for your country.
 1 not 2 3 4 5 6 7 8—1 2 8 5 6 7 3 4.">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-05T17:09:37+08:00">
+    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
 <title>压缩文件与压缩工具 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.87670dd7c79a649bfc31d667ee3e89cffdb89bc6a06abd766d42889a8c7a2af9.css" integrity="sha256-h2cN18eaZJv8MdZn7j6Jz/24m8agar12bUKImox6Kvk=">
-<script defer src="/missing/zh.search.min.4f448e7d84238ce61c9c990f9aeed6ac8d54159afe736b4584e20f28735aa061.js" integrity="sha256-T0SOfYQjjOYcnJkPmu7WrI1UFZr&#43;c2tFhOIPKHNaoGE="></script>
+<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
+<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
 
   
 
@@ -273,7 +273,10 @@ https://github.com/alex-shpak/hugo-book
   常见的压缩文件格式
   <a class="anchor" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e5%8e%8b%e7%bc%a9%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f">#</a>
 </h2>
-<p>在开始介绍这些格式之前，我们先引入一个叫做「压缩率」的概念。假设一堆文件原来的总体积是 100 MB，在压缩成某种格式的压缩文件后，体积变成了 86 MB，就称这时的压缩率是 86%。压缩率不仅与压缩文件格式有关，也与源文件本身的性质有关，但我们仍然可以以「大多数工作情况下的压缩率水平」的高低来笼统地比较几种不同的压缩文件格式。</p>
+<p>在开始介绍这些格式之前，我们先引入一个叫做「压缩率」的概念。「压缩率」，一言以蔽之，就是「压缩」这个操作节省了多少空间。<a href="#%e6%b3%a8%e9%87%8a">¹</a>假设一堆文件原来的总体积是 100 MB，在压缩成某种格式的压缩文件后，体积变成了 86 MB，这时的压缩率就是 <span>
+  \(1 - 86/100 = 14\%\)
+</span>
+。压缩率不仅与压缩文件格式有关，也与源文件本身的性质有关，但我们仍然可以以「大多数工作情况下的压缩率水平」的高低来笼统地比较几种不同的压缩文件格式。</p>
 <h3 id="zip-格式最广泛应用的格式">
   ZIP 格式——最广泛应用的格式
   <a class="anchor" href="#zip-%e6%a0%bc%e5%bc%8f%e6%9c%80%e5%b9%bf%e6%b3%9b%e5%ba%94%e7%94%a8%e7%9a%84%e6%a0%bc%e5%bc%8f">#</a>
@@ -285,14 +288,14 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#rar-%e6%a0%bc%e5%bc%8f%e5%8e%8b%e7%bc%a9%e7%8e%87%e9%ab%98%e7%9a%84%e7%a7%81%e6%9c%89%e6%a0%bc%e5%bc%8f">#</a>
 </h3>
 <p>RAR 格式是一种压缩率比较高的压缩文件格式。它的压缩文件扩展名是 <code>rar</code>，这种格式诞生于 1993 年。</p>
-<p>RAR 格式的技术细节是 <strong>不完全公开</strong> 的。具体来说，RAR 格式的解包器是公开的，并允许以一定的方式「嵌入」在其他的压缩工具中，而 <strong>RAR 格式的打包器则是有专利的且完全不公开</strong>。这意味着，市面上绝大多数的压缩工具——包括我们后文介绍的几乎所有压缩工具——都不能制作 RAR 格式的压缩包，但它们几乎都能解包这种格式的压缩包。Windows 平台上的唯一一个能制作 RAR 压缩包的压缩工具是 WinRAR，它是收费的（可以免费试用，但有广告）。</p>
+<p>RAR 格式的技术细节是<strong>不完全公开</strong>的。具体来说，RAR 格式的解包器是公开的，并允许以一定的方式「嵌入」在其他的压缩工具中，而 <strong>RAR 格式的打包器则是有专利的且完全不公开</strong>。这意味着，市面上绝大多数的压缩工具——包括我们后文介绍的几乎所有压缩工具——都不能制作 RAR 格式的压缩包，但它们几乎都能解包这种格式的压缩包。Windows 平台上的唯一一个能制作 RAR 压缩包的压缩工具是 WinRAR，它是收费的（可以免费试用，但有广告）。</p>
 <p>RAR 格式的压缩率通常比 ZIP 高上不少。除此之外，它还支持一系列其他的 ZIP 所没有的功能，例如「恢复记录」和更加安全的加密功能。鉴于制作 RAR 格式的压缩包只能使用 WinRAR，而 WinRAR 并不是我们十分推荐的软件（有广告），因此我们不太建议大家过多使用这种格式来分享文件。</p>
 <h3 id="7z-格式高压缩率的新兴开放格式">
   7z 格式——高压缩率的新兴开放格式
   <a class="anchor" href="#7z-%e6%a0%bc%e5%bc%8f%e9%ab%98%e5%8e%8b%e7%bc%a9%e7%8e%87%e7%9a%84%e6%96%b0%e5%85%b4%e5%bc%80%e6%94%be%e6%a0%bc%e5%bc%8f">#</a>
 </h3>
 <p>7z 格式是一款比较年轻（相比前面两种格式而言）的压缩文件格式。它的压缩文件扩展名是 <code>7z</code>，这种格式诞生于 1999 年。</p>
-<p>与 ZIP 一样，7z 格式的技术是完全公开的——这使得今天几乎所有的压缩软件都支持这种格式，无论是压缩还是解压缩。不仅如此，7z 的压缩率高于 ZIP，与 RAR 几乎平分秋色，又支持高强度加密、恢复记录等附加功能，因而 7z 是一种我们十分推荐 <strong>个人使用</strong>（例如，将自己的文件打包存档）的格式。</p>
+<p>与 ZIP 一样，7z 格式的技术是完全公开的——这使得今天几乎所有的压缩软件都支持这种格式，无论是压缩还是解压缩。不仅如此，7z 的压缩率高于 ZIP，与 RAR 几乎平分秋色，又支持高强度加密、恢复记录等附加功能，因而 7z 是一种我们十分推荐<strong>个人使用</strong>（例如，将自己的文件打包存档）的格式。</p>
 <p>然而，7z 作为后起之秀，自然没有 ZIP 或是 RAR 那样高的认可度。至少目前，在大多数人们的学习和工作中，这种格式运用的还比较少。故我们将 7z 推荐为「个人使用」——如果你想把一些文件打包发给别人（尤其是对方并不很懂电脑的情况下），ZIP 或许是更好的选择。</p>
 <h2 id="压缩工具--压缩软件">
   压缩工具 / 压缩软件
@@ -308,7 +311,7 @@ https://github.com/alex-shpak/hugo-book
 <p>这些选项能帮助你解压压缩包和制作新的压缩包。例如，上图中【提取到 “MicrosoftTeams-x64\”】就能把这个压缩包解压，再把其中的所有内容放在一个名叫 <code>MicrosoftTeams-x64</code> 的文件夹下；而上图中【添加到压缩包…】就可以将选中的文件压缩，具体用什么格式则会在后续的窗口中设定。</p>
 <p>如果你直接双击打开一个压缩包，一般来说就可以直接查看其中的内容，而不解包这个压缩包：</p>
 <p><img src="archive-formats-and-tools/Untitled%203.png" alt="Untitled" /></p>
-<p>如果你双击这份列表中的某一个文件，那么压缩工具一般会将 <strong>这一个文件</strong>（而不是整个压缩包）解压到一个 <strong>临时位置</strong>，并将其打开。这一切都是临时的，这个临时解压出来的文件会在你关闭它之后被销毁——因此，这种双击压缩包内某文件来打开它的方式 <strong>只适用于临时预览压缩包中某一个文件的内容</strong>。所以，在运行以压缩包形式提供的应用程序时，请 <strong>一定完全解压到某个干净的地方后再运行</strong>！</p>
+<p>如果你双击这份列表中的某一个文件，那么压缩工具一般会将<strong>这一个文件</strong>（而不是整个压缩包）解压到一个<strong>临时位置</strong>，并将其打开。这一切都是临时的，这个临时解压出来的文件会在你关闭它之后被销毁——因此，这种双击压缩包内某文件来打开它的方式<strong>只适用于临时预览压缩包中某一个文件的内容</strong>。所以，在运行以压缩包形式提供的应用程序时，请<strong>一定完全解压到某个干净的地方后再运行</strong>！</p>
 <p>通过「拖拽」的方式，则可以安全地将压缩包中的单独一个或几个文件解压到你想要的安全位置。例如，如果你选中上图中的 <code>book.json</code>、<code>favicon.ico</code> 和 <code>package.json</code> 三个文件，然后把它们拖拽到桌面，这三个文件就会被解压出来并放在桌面上。</p>
 <blockquote>
 <p>压缩包是具有一定可编辑性的——这意味着，借助压缩工具，你可以往一个现有的压缩包中继续添加新的文件，也可以删除一个现有压缩包中的某个文件。具体的操作依压缩工具不同而有所差异，因而这里不再深入介绍。</p>
@@ -344,7 +347,7 @@ https://github.com/alex-shpak/hugo-book
 <p>当你使用 Bandizip 打开一个压缩文件时，软件界面大致如下图。这里是没有广告的。你可以在此对压缩文件进行各种操作。</p>
 <p><img src="archive-formats-and-tools/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2022-02-08_194843.jpg" alt="屏幕截图 2022-02-08 194843.jpg" /></p>
 <p>Bandizip 值得一提的两个功能，一是「压缩文件预览」，二是「智能解压」。</p>
-<p>「压缩文件预览」是说，当你右击一个压缩文件时，若这个文件没有加密文件名¹，你的右键菜单便会显示出这个压缩包内部的部分文件；若是连文件名都加密了，那当然什么都看不见啦。这个功能默认未启用，需要在 Bandizip 的【设置】→【上下文菜单】→【选择解压菜单】中开启。可惜这个功能只支持旧式菜单，不支持 Windows 11 的新式菜单。</p>
+<p>「压缩文件预览」是说，当你右击一个压缩文件时，若这个文件没有加密文件名<a href="#%e6%b3%a8%e9%87%8a">²</a>，你的右键菜单便会显示出这个压缩包内部的部分文件；若是连文件名都加密了，那当然什么都看不见啦。这个功能默认未启用，需要在 Bandizip 的【设置】→【上下文菜单】→【选择解压菜单】中开启。可惜这个功能只支持旧式菜单，不支持 Windows 11 的新式菜单。</p>
 <p><img src="archive-formats-and-tools/Compressed_Preview.png" alt="Compressed_Preview.jpg" /></p>
 <p>「智能解压」则是一种「傻瓜式解压操作」。还记得 <a href="https://www.criwits.top/missing/file-and-file-management.html">文件与文件管理</a> 中我们介绍的「解压到当前文件夹」和「解压到 xxxxxx\」的区别吗？「智能解压」能够自动在这两种模式中选择更合适的那个——当你的压缩文件根目录仅有一个项目（无论文件或文件夹）时，Bandizip 便选择「解压到当前文件夹」；若有多个项目， Bandizip 则会选择「解压到 xxxxxx\」。</p>
 <p>举个例子：上图中的压缩包内部就有许多图片，假设这个压缩包的路径是 <code>D:\Touhou_Street.zip</code>，点击【智能解压】，那么图片就会被提取到 <code>D:\Touhou_Street\</code> 下；若这压缩包里面就一张图，则会被提取到 <code>D:\</code> 下。</p>
@@ -380,6 +383,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e6%b3%a8%e9%87%8a">#</a>
 </h2>
 <ol>
+<li>你可能看到有说法说「压缩率」指压缩后与压缩前的占用空间之比，但是，本文中介绍的压缩软件采用的「压缩率」均如正文中所述。</li>
 <li>加密的压缩文件可以选择「加密文件名」，这样的压缩包如果没有密码，我们将完全看不到压缩包内有什么东西；反之即使没有密码，我们也能看到压缩包内文件的列表。</li>
 </ol>
 </article>

@@ -26,12 +26,12 @@ DOS 时代 # 第一个名叫「Windows」的操作系统是微软在 1985 年 11
 1990 年，微软发布了 Windows 3.0 操作系统，这个版本获得了巨大成功，发布的半年内就卖了 200 万份。它仍然基于 DOS，但带来了更好的性能……与更新的报错界面。值得注意的一点是，在这个版本的 Windows 中，用户可以按下 Ctrl &#43; Alt &#43; Delete 来手动触发错误 （随时随地蓝屏）。之后发布于 1994 年的 Windows 3.">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-05T17:09:37+08:00">
+    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
 <title>蓝屏与解决蓝屏 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.87670dd7c79a649bfc31d667ee3e89cffdb89bc6a06abd766d42889a8c7a2af9.css" integrity="sha256-h2cN18eaZJv8MdZn7j6Jz/24m8agar12bUKImox6Kvk=">
-<script defer src="/missing/zh.search.min.4f448e7d84238ce61c9c990f9aeed6ac8d54159afe736b4584e20f28735aa061.js" integrity="sha256-T0SOfYQjjOYcnJkPmu7WrI1UFZr&#43;c2tFhOIPKHNaoGE="></script>
+<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
+<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
 
   
 
@@ -297,7 +297,7 @@ https://github.com/alex-shpak/hugo-book
 <li>活动内存转储：类似于「完整内存转储」，但系统自动筛除了与排查主机问题无关的部分，所以通常而言大小会小于完整内存转储，且能提供内存中的绝大部分有用信息。</li>
 </ul>
 <p>若想修改内存转储文件的存储路径，请为「小内存转储」提供一个文件夹目录，为其他类型提供一个 DMP 文件路径。</p>
-<p>默认情形下，Windows 会启用「自动内存转储」，这样能平衡存储空间消耗与崩溃信息收集效率，这也是大多数情形下的推荐选项。如果存储空间吃紧，建议启用「小内存转储」，让 Windows 至少收集最低限度的崩溃信息。不建议启用「完整内存转储」，它在占用大量空间的同时，收集信息的收益并没有比「核心内存转储」高出多少。「活动内存转储」适用于大量运行虚拟机时的情形，它会筛去虚拟机使用的内存，只关注物理主机。</p>
+<p><strong>默认情形下，Windows 会启用「自动内存转储」</strong>，这样能平衡存储空间消耗与崩溃信息收集效率，<strong>这也是大多数情形下的推荐选项</strong>。如果<strong>存储空间吃紧，建议启用「小内存转储」</strong>，让 Windows 至少收集最低限度的崩溃信息。不建议启用「完整内存转储」，它在占用大量空间的同时，收集信息的收益并没有比「核心内存转储」高出多少。「活动内存转储」适用于大量运行虚拟机时的情形，它会筛去虚拟机使用的内存，只关注物理主机。</p>
 <h3 id="分析转储文件">
   分析转储文件
   <a class="anchor" href="#%e5%88%86%e6%9e%90%e8%bd%ac%e5%82%a8%e6%96%87%e4%bb%b6">#</a>

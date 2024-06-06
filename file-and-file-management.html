@@ -28,12 +28,12 @@
 也许你听过「不要把软件安装到 C 盘」这样的说法。这是有根据的。系统本身就已经很庞大，系统自身工作产生的一些文件也会被自动地放在 C 盘内，导致 C 盘本身空间就容易变得局促。如果还将大量的软件装在 C 盘，会让 C 盘更加「不堪重负」，结果就是——红了。">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-05T17:09:37+08:00">
+    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
 <title>文件与文件管理 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.87670dd7c79a649bfc31d667ee3e89cffdb89bc6a06abd766d42889a8c7a2af9.css" integrity="sha256-h2cN18eaZJv8MdZn7j6Jz/24m8agar12bUKImox6Kvk=">
-<script defer src="/missing/zh.search.min.4f448e7d84238ce61c9c990f9aeed6ac8d54159afe736b4584e20f28735aa061.js" integrity="sha256-T0SOfYQjjOYcnJkPmu7WrI1UFZr&#43;c2tFhOIPKHNaoGE="></script>
+<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
+<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
 
   
 
@@ -235,11 +235,11 @@ https://github.com/alex-shpak/hugo-book
 <p>文件有自己的「名字」，称为「文件名」。在 Windows 系统中，文件名可以分成三个部分：</p>
 <ul>
 <li>「主名」是指文件名中，「点号」 <code>.</code> 之前的部分。这部分内容可以自定，相当于人类的姓名。上图中， <code>数字逻辑设计第 13 讲</code> 和 <code>Obsidian.1.5.11</code> 等都是文件的主名。</li>
-<li>「点号」是指文件名中间最后一个 <code>.</code> 。</li>
+<li>「点号」是指文件名中间<strong>最后一个</strong> <code>.</code> 。</li>
 <li>「扩展名」是指文件名中，「点号」 <code>.</code> 之后的部分²。扩展名展示着文件的类型，它会告诉操作系统，这个文件应该用什么方式来打开。例如，上图中 <code>本科毕业论文（设计）写作指南（理工类）.doc</code> 中的 <code>doc</code> 就是这个文件的扩展名，它说明这个文件是一个「Word 文档」，应该使用 Word 或 WPS 等软件打开。</li>
 </ul>
 <blockquote>
-<p>如果你的电脑上，文件的扩展名没有被显示（也就是说你只能看到文件的主名），像这样：</p>
+<p>如果你的电脑上，文件的扩展名没有显示出来（也就是说你只能看到文件的主名），像这样：</p>
 <p><img src="file-and-file-management/5_files_not_showing_extensions.png#center" alt="扩展名不显示" /></p>
 <p>请参见下面的操作速查卡进行设置。</p>
 </blockquote>
@@ -305,7 +305,7 @@ https://github.com/alex-shpak/hugo-book
 <p>其中「目标」一栏填写的正是 <code>cloudmusic.exe</code> 这个可执行文件，即「网易云音乐」的主程序的路径：</p>
 <pre tabindex="0"><code>D:\Program Files (x86)\Netease\CloudMusic\cloudmusic.exe
 </code></pre><p>因此，你双击打开这个「网易云音乐」快捷方式，就会打开 <code>cloudmusic.exe</code> 这个文件。如果你<strong>删掉了这个快捷方式，它并不会影响 <code>cloudmusic.exe</code> 这个文件，不会影响你电脑上安装的网易云音乐本身</strong>。
-因此，卸载软件并不能仅仅把桌面上的「快捷方式」删掉，而需要通过卸载工具进行。我们将在 <a href="https://www.criwits.top/missing/basic-maintenance.html">基本维护与安全防护</a> 中介绍。</p>
+因此，卸载软件并非仅仅把桌面上的「快捷方式」删掉就完事了，而是需要通过借助卸载工具。我们将在 <a href="https://www.criwits.top/missing/basic-maintenance.html">基本维护与安全防护</a> 中介绍。</p>
 <p>所有类型的文件以及文件夹都可以制作无数个快捷方式。如果你想给自己的某个文件 / 文件夹制作一个快捷方式，只需右键它，选择【发送到】→【桌面快捷方式】，就能在桌面生成一个指向这个文件的快捷方式了。这个快捷方式可以挪到系统的任何地方，也可以复制粘贴出很多个副本。它们全都指向原来的那个文件本身。</p>
 <p>一般来说，快捷方式的图标左下角会有一个「↗」符号。这个符号标志着这个文件并非某文件本身而是一个快捷方式。</p>
 <h2 id="合多为一精简空间压缩文件">
@@ -426,7 +426,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e4%b8%ba%e6%96%87%e4%bb%b6%e5%ae%89%e5%ae%b6">#</a>
 </h3>
 <p>首先为你要放的文件选择一个合适的位置。</p>
-<p>桌面，以及 Windows 系统预置的那些文件夹（「文档」「视频」「图片」等，打开【此电脑】就可以直接看到），除非按照后文所介绍的方法更改位置，否则全部是 C 盘内部的空间，因此在你手动更改它们的位置之前，<strong>不建议</strong> 将自己的文件放在这些地方。</p>
+<p>桌面，以及 Windows 系统预置的那些文件夹（「文档」「视频」「图片」等，打开【此电脑】就可以直接看到），除非按照后文所介绍的方法更改位置，否则全部是 C 盘内部的空间，因此在你手动更改它们的位置之前，<strong>不建议</strong>将自己的文件放在这些地方。</p>
 <p>另一方面，非 C 盘的分区，例如 D 盘甚至后续更多的磁盘分区，都是可以考虑的存放自己资料的位置。</p>
 <p>找到一个合适的位置后，我们便可以建立一套自己的分类方法来对文件进行整理和分类。</p>
 <ul>
@@ -468,7 +468,7 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="file-and-file-management/Untitled%2019.png" alt="Untitled" /></p>
 <p>我们将这里文本框中</p>
 <pre tabindex="0"><code>C:\Users\&lt;你的用户名&gt;\
-</code></pre><p>这一部分**（注意：最后一个 <code>Desktop</code>、 <code>Documents</code> 之类的名字不要动！）**⁶改成</p>
+</code></pre><p>这一部分 <strong>（注意：最后一个 <code>Desktop</code>、 <code>Documents</code> 之类的名字不要动！）</strong> ⁶改成</p>
 <pre tabindex="0"><code>D:\
 </code></pre><p><strong>也就是说，对于「桌面」而言，改完之后的完整路径是</strong></p>
 <pre tabindex="0"><code>D:\Desktop

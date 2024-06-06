@@ -12,8 +12,7 @@ Data is Precious, Operate Carefully!
 就作者观察到身边朋友所见的电脑日常问题中，除了「软件怎么不能用」「为什么电脑变慢了」这样笼统的问题外，最多的抱怨就是「我电脑又满了」，而这「满」，大部分指的是系统分区 C 盘。本章的所有内容，正是围绕「怎么样让我的电脑不那么满」这一需求展开的。
 给 C 盘分点空间 # 早年间，大约到 Windows 7 时代为止，C 盘空间大小并没有今天这般令人苦恼。彼时的日常用户，为 C 盘提供约 60 GB 空间，就能满足这台电脑以后一直使用的需求。Windows 8 系列暂且不论（反正也没多少人用），自 Windows 10 时代开始，系统本身与后续使用对空间的需求似乎迅速提升了。人们想着:「大概为 C 盘分个 100 GB 应该差不多吧。」然而事与愿违，如此想法总是导致了这样的事情：
 但是，系统在初装时只占用了 20 至 30 GB 不等的空间，而为空间所困的大家都会想着把软件尽量装到其他分区中，但为何用着用着 C 盘还是变成「红盘」了呢？这是因为软件所占的空间不止是本体，还有它在运行期间所产生的各种数据。
-用 WizTree 分析一下 C 盘（详见工具类软件推荐），你可能会发现，占空间最多的部分，除了系统文件夹 Windows 以外，还有应用程序相关的文件夹（Program Files、Program Files (x86)，以及 Program Data）、你自己的用户文件夹，以及可能有一个神秘的 hyberfil.sys 文件。让我们来一一探查。
-程序文件夹 # 你如果留心观察过软件的安装过程，或者仔细阅读了软件的寻找与安装一章，就会知道 Program Files 与 Program Files (x86) 两个文件夹是用来存放软件本体的文件夹。不过，实际上它们存放的是「为所有用户安装的软件」，至于只为一个用户安装的软件，我们后面再说。那么，为什么要分两个文件夹呢？这还要从 CPU 说起。">
+用 WizTree 分析一下 C 盘（详见 工具类软件推荐），你可能会发现，占空间最多的部分，除了系统文件夹 Windows 以外，还有应用程序相关的文件夹（Program Files、Program Files (x86)，以及 Program Data）、你自己的用户文件夹，以及可能有一个神秘的 hyberfil.sys 文件。让我们来一一探查。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:url" content="https://www.criwits.top/missing/manage-storage.html">
   <meta property="og:site_name" content="你缺失的那门计算机课">
   <meta property="og:title" content="空间管理大师">
@@ -24,16 +23,15 @@ Data is Precious, Operate Carefully!
 就作者观察到身边朋友所见的电脑日常问题中，除了「软件怎么不能用」「为什么电脑变慢了」这样笼统的问题外，最多的抱怨就是「我电脑又满了」，而这「满」，大部分指的是系统分区 C 盘。本章的所有内容，正是围绕「怎么样让我的电脑不那么满」这一需求展开的。
 给 C 盘分点空间 # 早年间，大约到 Windows 7 时代为止，C 盘空间大小并没有今天这般令人苦恼。彼时的日常用户，为 C 盘提供约 60 GB 空间，就能满足这台电脑以后一直使用的需求。Windows 8 系列暂且不论（反正也没多少人用），自 Windows 10 时代开始，系统本身与后续使用对空间的需求似乎迅速提升了。人们想着:「大概为 C 盘分个 100 GB 应该差不多吧。」然而事与愿违，如此想法总是导致了这样的事情：
 但是，系统在初装时只占用了 20 至 30 GB 不等的空间，而为空间所困的大家都会想着把软件尽量装到其他分区中，但为何用着用着 C 盘还是变成「红盘」了呢？这是因为软件所占的空间不止是本体，还有它在运行期间所产生的各种数据。
-用 WizTree 分析一下 C 盘（详见工具类软件推荐），你可能会发现，占空间最多的部分，除了系统文件夹 Windows 以外，还有应用程序相关的文件夹（Program Files、Program Files (x86)，以及 Program Data）、你自己的用户文件夹，以及可能有一个神秘的 hyberfil.sys 文件。让我们来一一探查。
-程序文件夹 # 你如果留心观察过软件的安装过程，或者仔细阅读了软件的寻找与安装一章，就会知道 Program Files 与 Program Files (x86) 两个文件夹是用来存放软件本体的文件夹。不过，实际上它们存放的是「为所有用户安装的软件」，至于只为一个用户安装的软件，我们后面再说。那么，为什么要分两个文件夹呢？这还要从 CPU 说起。">
+用 WizTree 分析一下 C 盘（详见 工具类软件推荐），你可能会发现，占空间最多的部分，除了系统文件夹 Windows 以外，还有应用程序相关的文件夹（Program Files、Program Files (x86)，以及 Program Data）、你自己的用户文件夹，以及可能有一个神秘的 hyberfil.sys 文件。让我们来一一探查。">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-05T17:09:37+08:00">
+    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
 <title>空间管理大师 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.87670dd7c79a649bfc31d667ee3e89cffdb89bc6a06abd766d42889a8c7a2af9.css" integrity="sha256-h2cN18eaZJv8MdZn7j6Jz/24m8agar12bUKImox6Kvk=">
-<script defer src="/missing/zh.search.min.4f448e7d84238ce61c9c990f9aeed6ac8d54159afe736b4584e20f28735aa061.js" integrity="sha256-T0SOfYQjjOYcnJkPmu7WrI1UFZr&#43;c2tFhOIPKHNaoGE="></script>
+<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
+<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
 
   
 
@@ -227,12 +225,12 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="manage-storage/Red_C_Drive.png#center" alt="Red C" /></p>
 <p>但是，系统在初装时只占用了 20 至 30 GB 不等的空间，而为空间所困的大家都会想着把软件尽量装到其他分区中，但为何用着用着 C 盘还是变成「红盘」了呢？这是因为软件所占的空间不止是本体，还有它在运行期间所产生的各种数据。</p>
 <p><img src="manage-storage/Scan_C_Drive.png#center" alt="Scan C" /></p>
-<p>用 WizTree 分析一下 C 盘（详见<a href="https://www.criwits.top/missing/tools-software.html#WizTree">工具类软件推荐</a>），你可能会发现，占空间最多的部分，除了系统文件夹 <code>Windows</code> 以外，还有应用程序相关的文件夹（<code>Program Files</code>、<code>Program Files (x86)</code>，以及 <code>Program Data</code>）、你自己的用户文件夹，以及可能有一个神秘的 <code>hyberfil.sys</code> 文件。让我们来一一探查。</p>
+<p>用 WizTree 分析一下 C 盘（详见 <a href="https://www.criwits.top/missing/tools-software.html#WizTree">工具类软件推荐</a>），你可能会发现，占空间最多的部分，除了系统文件夹 <code>Windows</code> 以外，还有应用程序相关的文件夹（<code>Program Files</code>、<code>Program Files (x86)</code>，以及 <code>Program Data</code>）、你自己的用户文件夹，以及可能有一个神秘的 <code>hyberfil.sys</code> 文件。让我们来一一探查。</p>
 <h3 id="程序文件夹">
   程序文件夹
   <a class="anchor" href="#%e7%a8%8b%e5%ba%8f%e6%96%87%e4%bb%b6%e5%a4%b9">#</a>
 </h3>
-<p>你如果留心观察过软件的安装过程，或者仔细阅读了<a href="https://www.criwits.top/missing/software-installation.html#安装软件">软件的寻找与安装</a>一章，就会知道 <code>Program Files</code> 与 <code>Program Files (x86)</code> 两个文件夹是用来存放软件本体的文件夹。不过，实际上它们存放的是「为所有用户安装的软件」，至于只为一个用户安装的软件，我们后面再说。那么，为什么要分两个文件夹呢？这还要从 CPU 说起。</p>
+<p>你如果留心观察过软件的安装过程，或者仔细阅读了 <a href="https://www.criwits.top/missing/software-installation.html#安装软件">软件的寻找与安装</a> 一章，就会知道 <code>Program Files</code> 与 <code>Program Files (x86)</code> 两个文件夹是用来存放软件本体的文件夹。不过，实际上它们存放的是「为所有用户安装的软件」，至于只为一个用户安装的软件，我们后面再说。那么，为什么要分两个文件夹呢？这还要从 CPU 说起。</p>
 <p>CPU 中有一个用于临时存储数据的结构——寄存器，寄存器能存多少位二进制数，就决定了这块 CPU 是多少位的。1980 年前后，Intel 公司推出了一系列经典 CPU，其型号以 80x86 为格式，其中 x 是一个数字，代表代数。这些 CPU 广泛用于个人电脑，我们今天使用的 Intel CPU 就是从它们发展而来。而自 80386 开始的 CPU 采用了 32 位架构，奠定了今天 CPU 位宽的基础，于是人们把个人电脑常用的 32 位 CPU 架构称作「x86」，下图是一块 80386（后来改名叫 i386）CPU。</p>
 <p><img src="manage-storage/i386.jpg#floatleft" alt="i386" /></p>
 <p>但是随着时间流逝，人们对内存的需求越来越大，32 位 CPU 只能供应 
@@ -243,7 +241,7 @@ https://github.com/alex-shpak/hugo-book
 </span>
  字节（即 4 GB）内存使用，所以人们在 32 位 CPU 的基础上发展了 64 位 CPU 来支持更大的内存。相应地，操作系统显然需要与 CPU 匹配，于是现今的操作系统大都是 64 位。但应用软件还有不少仍是 32 位的，故操作系统把软件文件夹分了两个，<code>Program Files</code> 用来存放 64 位的软件，而 <code>Program Files (x86)</code> 存放 32 位的。</p>
 <p>至于 <code>Program Data</code> 文件夹，平时它的存在感似乎微乎其微，毕竟它是一个隐藏文件夹。启用「显示隐藏文件」选项，你就可以在 C 盘根目录看到它。这个文件夹的作用，顾名思义，用来存放应用程序的数据。但是这里还要加上一些限定词，是用来存放「适用于所有用户」的数据。所以，<strong>即便你选择把软件安装到了别的分区，它仍然可能在使用过程中往 C 盘放东西。</strong></p>
-<p>在 <a href="user-and-ms-account%22%3e%7d%7d">用户与微软账户</a> 中我们知道了「多用户」的事情，而这 <code>Program Data</code> 文件夹存放的数据是不随用户变化而变化的「全局数据」。那用户自己特定的数据呢？这个问题的答案呼之欲出。</p>
+<p>在 <a href="https://www.criwits.top/missing/user-and-ms-account.html">用户与微软账户</a> 中我们知道了「多用户」的事情，而这 <code>Program Data</code> 文件夹存放的数据是不随用户变化而变化的「全局数据」。那用户自己特定的数据呢？这个问题的答案呼之欲出。</p>
 <h3 id="用户文件夹">
   用户文件夹
   <a class="anchor" href="#%e7%94%a8%e6%88%b7%e6%96%87%e4%bb%b6%e5%a4%b9">#</a>
@@ -313,7 +311,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ni &lt;链接所在路径&gt; -i SymbolicLink -ta &lt;本体所在路径&gt;
 </span></span></code></pre></div>这种方式对文件与文件夹都有效，但 PowerShell 无法识别 <code>%appdata%</code> 这样的特殊路径语法。同样，带空格的路径记得打上双引号。</li>
 </ol>
-<p>看上去 <code>New-Item</code> 可以用一个命令搞定文件与文件夹，挺通用，但目前它有一个重大问题——无法处理带西文方括号（「<code>[</code>」和「<code>]</code>」）的路径。所以**如果有路径包含了西文方括号，请使用 <code>mklink</code>。**如果提示什么「权限不足」之类的信息，请用管理员权限再试一次。</p>
+<p>看上去 <code>New-Item</code> 可以用一个命令搞定文件与文件夹，挺通用，但目前它有一个重大问题——无法处理带西文方括号（「<code>[</code>」和「<code>]</code>」）的路径。所以<strong>如果有路径包含了西文方括号，请使用 <code>mklink</code>。</strong> 如果提示什么「权限不足」之类的信息，请用管理员权限再试一次。</p>
 <p>实际上，在创建符号链接的时候，不需要让两者的名称一致，例如你可以创建一个名为 <code>114514</code> 的链接，但它指向你的 <code>高数秘籍.txt</code>。然而，若是这样做，虽然文件资源管理器知道它指向的是个什么东西，也知道用什么软件来打开目标，但其他应用可就不一定了。故我们<strong>推荐创建链接时使用与目标完全一致的名称。</strong></p>
 <h3 id="硬链接">
   硬链接
@@ -338,7 +336,7 @@ https://github.com/alex-shpak/hugo-book
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>ni &lt;链接所在路径&gt; -i HardLink -ta &lt;本体所在路径&gt;
 </span></span></code></pre></div>它对文件与文件夹都有效，但也无法处理带西文方括号的路径，无法识别特殊路径语法。当然，带空格的路径记得打上双引号。</li>
 </ol>
-<p>按照硬链接的行为，**无论一份数据有多少硬链接，磁盘上都应该只有一份文件的数据，只占一份文件的空间。**事实的确如此，但文件资源管理器不这么想——有多少链接，它就给你算多少份文件大小，于是乎，就有了这样占用空间比整个硬盘还大的奇景：</p>
+<p>按照硬链接的行为，<strong>无论一份数据有多少硬链接，磁盘上都应该只有一份文件的数据，只占一份文件的空间。</strong> 事实的确如此，但文件资源管理器不这么想——有多少链接，它就给你算多少份文件大小，于是乎，就有了这样占用空间比整个硬盘还大的奇景：</p>
 <p><img src="manage-storage/Interesting_Storage_Size.png#center" alt="Interesting_Storage_Size" /></p>
 <h3 id="目录联接-">
   目录联接 *
@@ -372,7 +370,7 @@ https://github.com/alex-shpak/hugo-book
   分区大挪移
   <a class="anchor" href="#%e5%88%86%e5%8c%ba%e5%a4%a7%e6%8c%aa%e7%a7%bb">#</a>
 </h3>
-<p>在<a href="https://www.criwits.top/missing/new-laptop-setup.html#划分新的分区">笔记本新机「开荒」指南</a>中，我们已经介绍过如何给新电脑从默认分区中拆出一个新分区来。但是，如果你换了块硬盘，或者使用了奇怪的操作，可能就会遇到这样的尴尬事情：</p>
+<p>在 <a href="https://www.criwits.top/missing/new-laptop-setup.html#划分新的分区">笔记本新机「开荒」指南</a> 中，我们已经介绍过如何给新电脑从默认分区中拆出一个新分区来。但是，如果你换了块硬盘，或者使用了奇怪的操作，可能就会遇到这样的尴尬事情：</p>
 <p><img src="manage-storage/Unexpandable_C.png#center" alt="Unexpandable C" /></p>
 <p>想要扩展空间的分区被卡在了另外动不了的分区之间，或者想要把中间的分区移动到尾部，空出来的部分给其他分区……如此这般情形 Windows 自带的磁盘管理显然无能为力。这时，我们必须求助第三方软件了，现在介绍强大的硬盘分区软件——DiskGenius。</p>
 <p><img src="manage-storage/DiskGenius.png#center" alt="Disk Genius" /></p>

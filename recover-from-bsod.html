@@ -26,12 +26,12 @@ DOS 时代 # 第一个名叫「Windows」的操作系统是微软在 1985 年 11
 1990 年，微软发布了 Windows 3.0 操作系统，这个版本获得了巨大成功，发布的半年内就卖了 200 万份。它仍然基于 DOS，但带来了更好的性能……与更新的报错界面。值得注意的一点是，在这个版本的 Windows 中，用户可以按下 Ctrl &#43; Alt &#43; Delete 来手动触发错误 （随时随地蓝屏）。之后发布于 1994 年的 Windows 3.">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
+    <meta property="article:modified_time" content="2024-06-09T18:05:53+08:00">
 <title>蓝屏与解决蓝屏 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
-<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
+<link rel="stylesheet" href="/missing/book.min.1589dc4b9270cb054be1a4a076415429200499174dc3397cbb549bed91989fb0.css" integrity="sha256-FYncS5JwywVL4aSgdkFUKSAEmRdNwzl8u1Sb7ZGYn7A=">
+<script defer src="/missing/zh.search.min.f3e5b0bd246be838dcdfe46a7b5cbf666077ae8f7532575a2187b11cece7d3ae.js" integrity="sha256-8&#43;WwvSRr6Djc3&#43;Rqe1y/ZmB3ro91MldaIYexHOzn064="></script>
 
   
 
@@ -176,7 +176,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
         <li><a href="#微软教你搞定蓝屏">微软教你「搞定」蓝屏</a></li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>
@@ -232,7 +231,7 @@ https://github.com/alex-shpak/hugo-book
   早期 NT 时代
   <a class="anchor" href="#%e6%97%a9%e6%9c%9f-nt-%e6%97%b6%e4%bb%a3">#</a>
 </h3>
-<p>自 1985 年起的几年，微软除了开发自家的 Windows 之外，还在与 IBM 合作开发一款名叫「OS/2」的操作系统，这个系统不是很出名，毕竟它的目标是 IBM 自家的计算机。到了 1988 年 11 月，微软的一个开发团队准备改进当时的 OS/2，使之成为一个兼容 POSIX（可移植操作系统接口）的多用户操作系统，起名「NT OS/2」¹。</p>
+<p>自 1985 年起的几年，微软除了开发自家的 Windows 之外，还在与 IBM 合作开发一款名叫「OS/2」的操作系统，这个系统不是很出名，毕竟它的目标是 IBM 自家的计算机。到了 1988 年 11 月，微软的一个开发团队准备改进当时的 OS/2，使之成为一个兼容 POSIX（可移植操作系统接口）的多用户操作系统，起名「NT OS/2」<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
 <p>之前提到过，Windows 3.0 非常畅销，于是<del>微软飘了</del>，开发团队开始用 Win32 接口代替 OS/2 的那些接口。这 Win32 是现有的那些基于 DOS 的 Windows API 的 32 位扩展版，使得现有的 Windows 程序能很轻松地移植到 NT 平台。微软觉得很棒，但 IBM 很不爽，随后在 1990 年终止了与微软的合作，微软开发的东西也变成了「Windows NT」，而这也是现今 Windows 系统的内核。</p>
 <p>Windows NT 的第一个大版本系列是 Windows NT 3.x，它包括 1993 年发布的 3.1、1994 年发布的 3.4 与 1995 年发布的 3.51。从这个系列起，Windows 蓝屏可以真正地叫做蓝屏了，因为它来自系统运行时的崩溃，一崩溃就只能重启。</p>
 <p><img src="recover-from-bsod/Win-NT-3.51-BSoD.png" alt="Win-NT-3.51-BSoD" /></p>
@@ -263,7 +262,7 @@ https://github.com/alex-shpak/hugo-book
 <p>在 2010 年左右这段时间，微软想进军移动市场，顺便来一个移动桌面平台「大一统」（虽然目前来看，结果不怎么样）。在此理念影响下，微软在 2012 年发布的 Windows 8 更像是一个平板电脑操作系统，操作逻辑与之前的 Windows 相去甚远，甚至连开始按钮都惨遭舍弃。用户当然不买账：「跟了我们这么久的开始按钮怎么能说丢就丢呢？」于是微软在随后的 Windows 8.1 把开始按钮加了回来，但也仅此而已，未能改变它「看起来像给平板用的系统」的本质，愿意用 Windows 8 系列的用户也还是不多。</p>
 <p>至于蓝屏界面，自 Windows 8 开始，它就从曾经的类似命令行上一大堆信息的画面变成了现在标志性的「 :( 」画面。 <del>（那是不是说「简洁」时代其实应该叫「 :( 」时代呢？）</del></p>
 <p><img src="recover-from-bsod/Win-8.1-BSoD.png" alt="Win-8.1-BSoD" /></p>
-<p>啊，时隔多年，我们再一次在蓝屏界面上看到了中文，真是可喜可贺、可歌可泣啊。但这提供的信息量相比之前的 Windows XP 到 7 的蓝屏界面少了许多，这里只告诉你「你的电脑有问题，得重启」，反倒没有了之前所看到的那一大段具体建议。此外，蓝屏代码由之前的十六进制数字变成了一串英文²。比起之前那不明所以的数字，这样的错误代码倒是显得更直观，但还是很笼统。至于技术层面的错误信息，除了这个蓝屏代码就没有其他的了，甚至没有与之相关的进程信息，这导致普通用户只能根据这个蓝屏代码来搜索解决方案，增大了排查难度。 <del>（看来微软这倒车是越开越远了啊。）</del></p>
+<p>啊，时隔多年，我们再一次在蓝屏界面上看到了中文，真是可喜可贺、可歌可泣啊。但这提供的信息量相比之前的 Windows XP 到 7 的蓝屏界面少了许多，这里只告诉你「你的电脑有问题，得重启」，反倒没有了之前所看到的那一大段具体建议。此外，蓝屏代码由之前的十六进制数字变成了一串英文<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。比起之前那不明所以的数字，这样的错误代码倒是显得更直观，但还是很笼统。至于技术层面的错误信息，除了这个蓝屏代码就没有其他的了，甚至没有与之相关的进程信息，这导致普通用户只能根据这个蓝屏代码来搜索解决方案，增大了排查难度。 <del>（看来微软这倒车是越开越远了啊。）</del></p>
 <p>Windows 8.1 的下一代是 2014 年发布的 Windows 10 <del>（9 呢？记住，微软是自由的。）</del>，是如今广泛使用的操作系统。这次微软倒是长记性了，把开始菜单弄回来了，不过变成了「磁贴式」，倒也方便许多。Windows 10 的蓝屏界面在本节开头已经看到过了，与上一代不同的地方在于：它多了一个指向其旁边<a href="https://www.windows.com/stopcode">蓝屏错误疑难解答</a>链接的二维码，似乎能帮助用户解决问题。（但真的有用吗？请看后文。）</p>
 <p>Windows 10 的下一代是 2021 年发布的 Windows 11，正式版的蓝屏界面与 Windows 10 的一模一样，但值得一提的是，在某个时段的预览版中，蓝屏界面变成了黑色，就像这样：</p>
 <p><img src="recover-from-bsod/Win-11-Pre-BSoD.png" alt="Win-11-Pre-BSoD" /></p>
@@ -353,14 +352,17 @@ IMAGE_NAME:  ntkrnlmp.exe
 <li>你还见过什么样类似「蓝屏」性质的系统错误界面，它们与「蓝屏」有何异同？</li>
 <li>尝试自己分析一个蓝屏转储文件，如果自己电脑里没有可以找找朋友的电脑（但不必为了这个就把自己的电脑弄蓝屏）。</li>
 </ol>
-<h2 id="注释">
-  注释
-  <a class="anchor" href="#%e6%b3%a8%e9%87%8a">#</a>
-</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li>那时 NT 代表「New Technology」，但后来却失去了含义，变成了单纯的代号。</li>
-<li>事实上早期 NT 时代中也出现过这些英文，不过它们并没有「蓝屏代码」的地位。而「简洁」时代的蓝屏代码也不全是英文，偶尔会有数字出现。</li>
+<li id="fn:1">
+<p>那时 NT 代表「New Technology」，但后来却失去了含义，变成了单纯的代号。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>事实上早期 NT 时代中也出现过这些英文，不过它们并没有「蓝屏代码」的地位。而「简洁」时代的蓝屏代码也不全是英文，偶尔会有数字出现。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
+</div>
 </article>
  
       
@@ -430,7 +432,6 @@ IMAGE_NAME:  ntkrnlmp.exe
         </li>
         <li><a href="#微软教你搞定蓝屏">微软教你「搞定」蓝屏</a></li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>

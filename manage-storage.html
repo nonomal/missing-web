@@ -26,12 +26,12 @@ Data is Precious, Operate Carefully!
 用 WizTree 分析一下 C 盘（详见 工具类软件推荐），你可能会发现，占空间最多的部分，除了系统文件夹 Windows 以外，还有应用程序相关的文件夹（Program Files、Program Files (x86)，以及 Program Data）、你自己的用户文件夹，以及可能有一个神秘的 hyberfil.sys 文件。让我们来一一探查。">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
+    <meta property="article:modified_time" content="2024-06-09T18:05:53+08:00">
 <title>空间管理大师 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
-<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
+<link rel="stylesheet" href="/missing/book.min.1589dc4b9270cb054be1a4a076415429200499174dc3397cbb549bed91989fb0.css" integrity="sha256-FYncS5JwywVL4aSgdkFUKSAEmRdNwzl8u1Sb7ZGYn7A=">
+<script defer src="/missing/zh.search.min.f3e5b0bd246be838dcdfe46a7b5cbf666077ae8f7532575a2187b11cece7d3ae.js" integrity="sha256-8&#43;WwvSRr6Djc3&#43;Rqe1y/ZmB3ro91MldaIYexHOzn064="></script>
 
   
 
@@ -185,7 +185,6 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>
@@ -282,7 +281,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e5%bd%b1%e5%88%86%e8%ba%ab%e6%96%87%e4%bb%b6%e9%93%be%e6%8e%a5">#</a>
 </h2>
 <p>在 <a href="https://www.criwits.top/missing/file-and-file-management.html#文件的「替身」——快捷方式">文件与文件管理</a> 一章中我们已经介绍了「快捷方式」的基本概念，但快捷方式说到底是一个文件，一个扩展名为 <code>lnk</code> 的文件。「不同类型的文件需要用不同的 app 来打开」，这也是我们已经知道的，那么快捷方式呢？答案是文件资源管理器，快捷方式是作为文件资源管理器的扩展而存在的，资源管理器读取它，就知道该去哪里找文件。</p>
-<p>不妨试一试用记事本来打开一个快捷方式<a href="#%e6%b3%a8%e9%87%8a">¹</a>：</p>
+<p>不妨试一试用记事本来打开一个快捷方式<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>：</p>
 <ul>
 <li>在桌面按住 <code>Shift</code> 点右键，选择【在此处打开 PowerShell 窗口】；</li>
 <li>先输入 <code>dir</code>，你就可以看到目前你桌面上的所有文件与文件夹；</li>
@@ -432,13 +431,14 @@ https://github.com/alex-shpak/hugo-book
 <li>尝试用「磁盘清理」工具清一下你的所有分区。</li>
 <li>查看你电脑上的分区情况，以及是否存在细小的未分配空间，若有必要，可以试着重新分区。（记得备份数据！）</li>
 </ol>
-<h2 id="注释">
-  注释
-  <a class="anchor" href="#%e6%b3%a8%e9%87%8a">#</a>
-</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li>直接在记事本里面点【打开】是不行的，因为「打开」操作调用了文件资源管理器。</li>
+<li id="fn:1">
+<p>直接在记事本里面点【打开】是不行的，因为「打开」操作调用了文件资源管理器。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
+</div>
 </article>
  
       
@@ -517,7 +517,6 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>

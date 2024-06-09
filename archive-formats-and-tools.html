@@ -22,12 +22,12 @@ Ask not what your country can do for you—ask what you can do for your country.
 1 not 2 3 4 5 6 7 8—1 2 8 5 6 7 3 4.">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-06T21:58:53+08:00">
+    <meta property="article:modified_time" content="2024-06-09T18:05:53+08:00">
 <title>压缩文件与压缩工具 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/missing/book.min.bcefc56cc86f4624055a808c98b06f77df7f769fb715e5bd572a8fd4fd59fbd1.css" integrity="sha256-vO/FbMhvRiQFWoCMmLBvd99/dp&#43;3FeW9VyqP1P1Z&#43;9E=">
-<script defer src="/missing/zh.search.min.6117011e28ff446d8e7d0d7ac4c157a3553bf3cd4313410a0296fc0049899ef3.js" integrity="sha256-YRcBHij/RG2OfQ16xMFXo1U7881DE0EKApb8AEmJnvM="></script>
+<link rel="stylesheet" href="/missing/book.min.1589dc4b9270cb054be1a4a076415429200499174dc3397cbb549bed91989fb0.css" integrity="sha256-FYncS5JwywVL4aSgdkFUKSAEmRdNwzl8u1Sb7ZGYn7A=">
+<script defer src="/missing/zh.search.min.f3e5b0bd246be838dcdfe46a7b5cbf666077ae8f7532575a2187b11cece7d3ae.js" integrity="sha256-8&#43;WwvSRr6Djc3&#43;Rqe1y/ZmB3ro91MldaIYexHOzn064="></script>
 
   
 
@@ -176,7 +176,6 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>
@@ -273,7 +272,7 @@ https://github.com/alex-shpak/hugo-book
   常见的压缩文件格式
   <a class="anchor" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e5%8e%8b%e7%bc%a9%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f">#</a>
 </h2>
-<p>在开始介绍这些格式之前，我们先引入一个叫做「压缩率」的概念。「压缩率」，一言以蔽之，就是「压缩」这个操作节省了多少空间。<a href="#%e6%b3%a8%e9%87%8a">¹</a>假设一堆文件原来的总体积是 100 MB，在压缩成某种格式的压缩文件后，体积变成了 86 MB，这时的压缩率就是 <span>
+<p>在开始介绍这些格式之前，我们先引入一个叫做「压缩率」的概念。「压缩率」，一言以蔽之，就是「压缩」这个操作节省了多少空间。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>假设一堆文件原来的总体积是 100 MB，在压缩成某种格式的压缩文件后，体积变成了 86 MB，这时的压缩率就是 <span>
   \(1 - 86/100 = 14\%\)
 </span>
 。压缩率不仅与压缩文件格式有关，也与源文件本身的性质有关，但我们仍然可以以「大多数工作情况下的压缩率水平」的高低来笼统地比较几种不同的压缩文件格式。</p>
@@ -347,7 +346,7 @@ https://github.com/alex-shpak/hugo-book
 <p>当你使用 Bandizip 打开一个压缩文件时，软件界面大致如下图。这里是没有广告的。你可以在此对压缩文件进行各种操作。</p>
 <p><img src="archive-formats-and-tools/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE_2022-02-08_194843.jpg" alt="屏幕截图 2022-02-08 194843.jpg" /></p>
 <p>Bandizip 值得一提的两个功能，一是「压缩文件预览」，二是「智能解压」。</p>
-<p>「压缩文件预览」是说，当你右击一个压缩文件时，若这个文件没有加密文件名<a href="#%e6%b3%a8%e9%87%8a">²</a>，你的右键菜单便会显示出这个压缩包内部的部分文件；若是连文件名都加密了，那当然什么都看不见啦。这个功能默认未启用，需要在 Bandizip 的【设置】→【上下文菜单】→【选择解压菜单】中开启。可惜这个功能只支持旧式菜单，不支持 Windows 11 的新式菜单。</p>
+<p>「压缩文件预览」是说，当你右击一个压缩文件时，若这个文件没有加密文件名<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，你的右键菜单便会显示出这个压缩包内部的部分文件；若是连文件名都加密了，那当然什么都看不见啦。这个功能默认未启用，需要在 Bandizip 的【设置】→【上下文菜单】→【选择解压菜单】中开启。可惜这个功能只支持旧式菜单，不支持 Windows 11 的新式菜单。</p>
 <p><img src="archive-formats-and-tools/Compressed_Preview.png" alt="Compressed_Preview.jpg" /></p>
 <p>「智能解压」则是一种「傻瓜式解压操作」。还记得 <a href="https://www.criwits.top/missing/file-and-file-management.html">文件与文件管理</a> 中我们介绍的「解压到当前文件夹」和「解压到 xxxxxx\」的区别吗？「智能解压」能够自动在这两种模式中选择更合适的那个——当你的压缩文件根目录仅有一个项目（无论文件或文件夹）时，Bandizip 便选择「解压到当前文件夹」；若有多个项目， Bandizip 则会选择「解压到 xxxxxx\」。</p>
 <p>举个例子：上图中的压缩包内部就有许多图片，假设这个压缩包的路径是 <code>D:\Touhou_Street.zip</code>，点击【智能解压】，那么图片就会被提取到 <code>D:\Touhou_Street\</code> 下；若这压缩包里面就一张图，则会被提取到 <code>D:\</code> 下。</p>
@@ -378,14 +377,17 @@ https://github.com/alex-shpak/hugo-book
 <li>自己制作几个压缩文件，然后分别用「解压到当前文件夹」「解压到 xxxxxx\」来解压它们，体会这两种解压方式的区别。思考 Bandizip 的「智能解压」到底有多「智能」。</li>
 <li>你正在使用什么压缩软件？它的使用体验（界面美观度、操作难易度、是否有广告……）如何？</li>
 </ol>
-<h2 id="注释">
-  注释
-  <a class="anchor" href="#%e6%b3%a8%e9%87%8a">#</a>
-</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li>你可能看到有说法说「压缩率」指压缩后与压缩前的占用空间之比，但是，本文中介绍的压缩软件采用的「压缩率」均如正文中所述。</li>
-<li>加密的压缩文件可以选择「加密文件名」，这样的压缩包如果没有密码，我们将完全看不到压缩包内有什么东西；反之即使没有密码，我们也能看到压缩包内文件的列表。</li>
+<li id="fn:1">
+<p>你可能看到有说法说「压缩率」指压缩后与压缩前的占用空间之比，但是，本文中介绍的压缩软件采用的「压缩率」均如正文中所述。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>加密的压缩文件可以选择「加密文件名」，这样的压缩包如果没有密码，我们将完全看不到压缩包内有什么东西；反之即使没有密码，我们也能看到压缩包内文件的列表。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
+</div>
 </article>
  
       
@@ -459,7 +461,6 @@ https://github.com/alex-shpak/hugo-book
           </ul>
         </li>
         <li><a href="#练习">练习</a></li>
-        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
   </ul>

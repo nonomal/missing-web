@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="用户与微软账号 # 本章我们介绍 Windows 系统中的「用户」概念，以及微软账号的相关事项。看完这一部分，你或许可以找到这些问题的答案：
-为什么我自己的电脑还有「用户」？ 什么是微软账号（Microsoft 账户[^1]）？我为什么被要求注册 / 登录微软账号？ 在 基本维护和安全防护 中提到的「UAC 弹窗」和「以管理员身份运行」究竟是什么？ 登录微软账号有什么好处？ 「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。
+为什么我自己的电脑还有「用户」？ 什么是微软账号（Microsoft 账户）？我为什么被要求注册 / 登录微软账号？ 在 基本维护和安全防护 中提到的「UAC 弹窗」和「以管理员身份运行」究竟是什么？ 登录微软账号有什么好处？ 要是我想改掉自己用户文件夹的名称该怎么做？ 「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。1
 「用户」概念的产生 # 三十年前，「电脑」对于人们来说还是可望而不可得的「奢侈品」。在当时，只有在少数学校和科研院所，才能看到数量有限的电脑。在这样的情况下，自然免不了多人共用一台电脑来学习和工作。为了隔离每个人在电脑上保存的文件和偏好设置，「用户」这个概念便应运而生。
 如同 QQ 之类的社交软件账号一样，在有「用户」概念的系统中，我们都可以在一台电脑上建立一个或者多个「用户」。在每次开机启动时，我们可以在用户列表中选择合适的身份身份来「登录」（下图左下角，图中选择的用户是「hans」）。
 在这样的系统中，每个用户拥有自己独立的「用户名」和密码，每个用户在自己的用户文件夹（参见 文件与文件管理 的「用户文件夹」相关章节）内保存的文件都对其他用户不可见，且每个用户设置的桌面壁纸、颜色风格等都互不影响。在多用户系统的加持下，人们成功地实现了「一台电脑，多人在不同时段共用」这一目标。
 时过境迁，电脑逐渐普及，成为了每个人工作和生活的必需品，那种「多人不得不共用一台电脑」的日子也渐渐成为历史。然而，「多用户」这一思想却一直流传下来，形成了今天电脑系统的标配。尽管今天的个人电脑大都真的只是「个人」电脑——由一个人使用，多用户系统依然在我们的系统中得以保留，并在权限控制等特殊方面起着非常重要的作用。
-Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统（参见 笔记本新机「开荒」指南 ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户1。打开 C:\用户\ 目录，你可以看到一个以它命名的文件夹，以及一个 公用 文件夹：
+Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统（参见 笔记本新机「开荒」指南 ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户2。打开 C:\用户\ 目录，你可以看到一个以它命名的文件夹，以及一个 公用 文件夹：
 在那个以你的用户名为名的文件夹中，放置着你的用户文件和诸如「文档」「下载」等文件夹（如果你没有按照 文件与文件管理 中介绍的过程去迁移它们的话）。可以想象，假如这台电脑上还有另外的几个用户，那么在 C:\用户\ 将罗列着多个用户的文件夹。每个用户都只能打开属于自己的那个文件夹以及 公用 文件夹，从而实现了「多个用户资料的隔离」与「用户间资料的共享」。
 在前文我们已经讲过，「文档」「下载」这样的文件夹是微软好心留给我们，帮助我们整理文件的。现在你应该能理解这样的「好心」了：Windows 本身就是一个为多用户设计的系统，从其他用户的角度考虑，用户的文件只有放在 C:\用户\&lt;用户名&gt;\ 这里才比较安稳——至于什么「这里是 C 盘，不适合放文件」，那微软才不管呢。
 用户与权限，以及 Administrator # 上文有说，今天保留多用户机制的一个很重要的原因，就是它能够更好地实现系统权限的分离。还记得 基本维护和安全防护 中提到的权限相关的知识吗？在这里，我们将对那里的叙述进行一些扩展。
@@ -22,12 +22,12 @@ Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统
   <meta property="og:site_name" content="你缺失的那门计算机课">
   <meta property="og:title" content="用户与微软账号">
   <meta property="og:description" content="用户与微软账号 # 本章我们介绍 Windows 系统中的「用户」概念，以及微软账号的相关事项。看完这一部分，你或许可以找到这些问题的答案：
-为什么我自己的电脑还有「用户」？ 什么是微软账号（Microsoft 账户[^1]）？我为什么被要求注册 / 登录微软账号？ 在 基本维护和安全防护 中提到的「UAC 弹窗」和「以管理员身份运行」究竟是什么？ 登录微软账号有什么好处？ 「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。
+为什么我自己的电脑还有「用户」？ 什么是微软账号（Microsoft 账户）？我为什么被要求注册 / 登录微软账号？ 在 基本维护和安全防护 中提到的「UAC 弹窗」和「以管理员身份运行」究竟是什么？ 登录微软账号有什么好处？ 要是我想改掉自己用户文件夹的名称该怎么做？ 「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。1
 「用户」概念的产生 # 三十年前，「电脑」对于人们来说还是可望而不可得的「奢侈品」。在当时，只有在少数学校和科研院所，才能看到数量有限的电脑。在这样的情况下，自然免不了多人共用一台电脑来学习和工作。为了隔离每个人在电脑上保存的文件和偏好设置，「用户」这个概念便应运而生。
 如同 QQ 之类的社交软件账号一样，在有「用户」概念的系统中，我们都可以在一台电脑上建立一个或者多个「用户」。在每次开机启动时，我们可以在用户列表中选择合适的身份身份来「登录」（下图左下角，图中选择的用户是「hans」）。
 在这样的系统中，每个用户拥有自己独立的「用户名」和密码，每个用户在自己的用户文件夹（参见 文件与文件管理 的「用户文件夹」相关章节）内保存的文件都对其他用户不可见，且每个用户设置的桌面壁纸、颜色风格等都互不影响。在多用户系统的加持下，人们成功地实现了「一台电脑，多人在不同时段共用」这一目标。
 时过境迁，电脑逐渐普及，成为了每个人工作和生活的必需品，那种「多人不得不共用一台电脑」的日子也渐渐成为历史。然而，「多用户」这一思想却一直流传下来，形成了今天电脑系统的标配。尽管今天的个人电脑大都真的只是「个人」电脑——由一个人使用，多用户系统依然在我们的系统中得以保留，并在权限控制等特殊方面起着非常重要的作用。
-Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统（参见 笔记本新机「开荒」指南 ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户1。打开 C:\用户\ 目录，你可以看到一个以它命名的文件夹，以及一个 公用 文件夹：
+Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统（参见 笔记本新机「开荒」指南 ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户2。打开 C:\用户\ 目录，你可以看到一个以它命名的文件夹，以及一个 公用 文件夹：
 在那个以你的用户名为名的文件夹中，放置着你的用户文件和诸如「文档」「下载」等文件夹（如果你没有按照 文件与文件管理 中介绍的过程去迁移它们的话）。可以想象，假如这台电脑上还有另外的几个用户，那么在 C:\用户\ 将罗列着多个用户的文件夹。每个用户都只能打开属于自己的那个文件夹以及 公用 文件夹，从而实现了「多个用户资料的隔离」与「用户间资料的共享」。
 在前文我们已经讲过，「文档」「下载」这样的文件夹是微软好心留给我们，帮助我们整理文件的。现在你应该能理解这样的「好心」了：Windows 本身就是一个为多用户设计的系统，从其他用户的角度考虑，用户的文件只有放在 C:\用户\&lt;用户名&gt;\ 这里才比较安稳——至于什么「这里是 C 盘，不适合放文件」，那微软才不管呢。
 用户与权限，以及 Administrator # 上文有说，今天保留多用户机制的一个很重要的原因，就是它能够更好地实现系统权限的分离。还记得 基本维护和安全防护 中提到的权限相关的知识吗？在这里，我们将对那里的叙述进行一些扩展。
@@ -36,12 +36,12 @@ Windows 操作系统中的「用户」 # 在我们第一次启动 Windows 系统
 但 Windows 为我们提供了一套「假手于人」的机制。Administrator 这个重量级用户是不能亲自下场的，但我们可以「借」它的身份来做事。还记得前文提到，右击一个程序选择【以管理员身份运行】，就可以赋予程序提升的权限吗？所谓的「以管理员身份运行」，就是「以 Administrator 的身份运行」；而 Administrator 有着很高的权限，我们就能以它的身份赋予程序高权限。那个「UAC 弹窗」的本质，就是某个程序在尝试借 Administrator 的身份来执行自己时系统弹出的警告。">
   <meta property="og:locale" content="zh">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2024-06-09T18:05:53+08:00">
+    <meta property="article:modified_time" content="2024-06-09T21:52:26+08:00">
 <title>用户与微软账号 | 你缺失的那门计算机课 | 计算机技术学习札记</title>
 <link rel="manifest" href="/missing/manifest.json">
 <link rel="icon" href="/missing/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/missing/book.min.1589dc4b9270cb054be1a4a076415429200499174dc3397cbb549bed91989fb0.css" integrity="sha256-FYncS5JwywVL4aSgdkFUKSAEmRdNwzl8u1Sb7ZGYn7A=">
-<script defer src="/missing/zh.search.min.f3e5b0bd246be838dcdfe46a7b5cbf666077ae8f7532575a2187b11cece7d3ae.js" integrity="sha256-8&#43;WwvSRr6Djc3&#43;Rqe1y/ZmB3ro91MldaIYexHOzn064="></script>
+<script defer src="/missing/zh.search.min.ceebe8e55cc09affd3d5eb12bf7d84f7e3194095c21001bceec4af075fcc07c7.js" integrity="sha256-zuvo5VzAmv/T1esSv32E9&#43;MZQJXCEAG87sSvB1/MB8c="></script>
 
   
 
@@ -176,6 +176,16 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#用户与权限以及-administrator">用户与权限，以及 Administrator</a></li>
         <li><a href="#本地帐户和微软账号">本地帐户和微软账号</a></li>
         <li><a href="#设备加密与微软帐号-">设备加密与微软帐号 *</a></li>
+        <li><a href="#更改用户文件夹名-">更改用户文件夹名 *</a>
+          <ul>
+            <li><a href="#获取当前用户的-sid">获取当前用户的 SID</a></li>
+            <li><a href="#新建一个管理员账户">新建一个管理员账户</a></li>
+            <li><a href="#在新管理员账户下操作原账户的文件夹">在新管理员账户下操作原账户的文件夹</a></li>
+            <li><a href="#修改注册表以匹配新名字">修改注册表以匹配新名字</a></li>
+            <li><a href="#建立新旧用户文件夹间的符号链接">建立新旧用户文件夹间的符号链接</a></li>
+            <li><a href="#尾声">尾声</a></li>
+          </ul>
+        </li>
         <li><a href="#练习">练习</a></li>
       </ul>
     </li>
@@ -199,13 +209,14 @@ https://github.com/alex-shpak/hugo-book
   <p>本章我们介绍 Windows 系统中的「用户」概念，以及微软账号的相关事项。看完这一部分，你或许可以找到这些问题的答案：</p>
 <ul>
 <li>为什么我自己的电脑还有「用户」？</li>
-<li>什么是微软账号（Microsoft 账户[^1]）？我为什么被要求注册 / 登录微软账号？</li>
+<li>什么是微软账号（Microsoft 账户）？我为什么被要求注册 / 登录微软账号？</li>
 <li>在 <a href="https://www.criwits.top/missing/basic-maintenance.html">基本维护和安全防护</a> 中提到的「UAC 弹窗」和「以管理员身份运行」究竟是什么？</li>
 <li>登录微软账号有什么好处？</li>
+<li>要是我想改掉自己用户文件夹的名称该怎么做？</li>
 </ul>
 </blockquote>
 
-<p>「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。</p>
+<p>「用户」的概念是现代计算机操作系统的一个重要组成部分。尽管在今天，绝大多数电脑都仅为个人使用，「多用户」的理念似乎正渐渐模糊，但我们依然有必要了解这套机制的运作过程。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h2 id="用户概念的产生">
   「用户」概念的产生
   <a class="anchor" href="#%e7%94%a8%e6%88%b7%e6%a6%82%e5%bf%b5%e7%9a%84%e4%ba%a7%e7%94%9f">#</a>
@@ -219,7 +230,7 @@ https://github.com/alex-shpak/hugo-book
   Windows 操作系统中的「用户」
   <a class="anchor" href="#windows-%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e4%b8%ad%e7%9a%84%e7%94%a8%e6%88%b7">#</a>
 </h2>
-<p>在我们第一次启动 Windows 系统（参见 <a href="https://www.criwits.top/missing/new-laptop-setup.html">笔记本新机「开荒」指南</a> ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。打开 <code>C:\用户\</code> 目录，你可以看到一个以它命名的文件夹，以及一个 <code>公用</code> 文件夹：</p>
+<p>在我们第一次启动 Windows 系统（参见 <a href="https://www.criwits.top/missing/new-laptop-setup.html">笔记本新机「开荒」指南</a> ）时，系统会要求我们新建一个用户，并设置它的用户名和密码，它将作为你自己所使用的用户<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。打开 <code>C:\用户\</code> 目录，你可以看到一个以它命名的文件夹，以及一个 <code>公用</code> 文件夹：</p>
 <p><img src="user-and-ms-account/Untitled%201.png" alt="Untitled" /></p>
 <p>在那个以你的用户名为名的文件夹中，放置着你的用户文件和诸如「文档」「下载」等文件夹（如果你没有按照 <a href="https://www.criwits.top/missing/file-and-file-management.html">文件与文件管理</a> 中介绍的过程去迁移它们的话）。可以想象，假如这台电脑上还有另外的几个用户，那么在 <code>C:\用户\</code> 将罗列着多个用户的文件夹。每个用户都只能打开属于自己的那个文件夹以及 <code>公用</code> 文件夹，从而实现了「多个用户资料的隔离」与「用户间资料的共享」。</p>
 <p>在前文我们已经讲过，「文档」「下载」这样的文件夹是微软好心留给我们，帮助我们整理文件的。现在你应该能理解这样的「好心」了：Windows 本身就是一个为多用户设计的系统，从其他用户的角度考虑，用户的文件只有放在 <code>C:\用户\&lt;用户名&gt;\</code> 这里才比较安稳——至于什么「这里是 C 盘，不适合放文件」，那微软才不管呢。</p>
@@ -240,7 +251,7 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e6%9c%ac%e5%9c%b0%e5%b8%90%e6%88%b7%e5%92%8c%e5%be%ae%e8%bd%af%e8%b4%a6%e5%8f%b7">#</a>
 </h2>
 <p>你用过手机上的「云服务」吗？近年来，诸如 iCloud、华为云服务、小米帐号这样的云服务在一定程度上提升了我们使用手机的便利程度。事实上，微软在 Windows 系统上也有着类似的服务：我们可以将系统中的用户和在线的「微软帐号」绑定，实现诸如同步等的各种附加功能。</p>
-<p>为了和「已经绑定了微软帐号的用户」区分，我们把原先的传统的「用户」称为「本地帐户」。将本地帐户链接到微软帐号后，微软帐号的登录密码就会变成我们开机使用的密码（除此之外还可以设置额外的数字密码），微软帐号的用户名就变成了我们<strong>显示在屏幕上</strong>的用户名<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。如果你原本使用的是本地帐户，打开【设置】→【帐户】，选择【改用 Microsoft 帐户登录】，按提示登录或者注册一个微软帐号即可完成绑定。</p>
+<p>为了和「已经绑定了微软帐号的用户」区分，我们把原先的传统的「用户」称为「本地帐户」。将本地帐户链接到微软帐号后，微软帐号的登录密码就会变成我们开机使用的密码（除此之外还可以设置额外的数字密码），微软帐号的用户名就变成了我们<strong>显示在屏幕上</strong>的用户名<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>。如果你原本使用的是本地帐户，打开【设置】→【帐户】，选择【改用 Microsoft 帐户登录】，按提示登录或者注册一个微软帐号即可完成绑定。</p>
 <p><img src="user-and-ms-account/Untitled%203.png" alt="Untitled" /></p>
 <p>我们建议读者在自己的电脑上以微软帐号登录。将自己的本地帐户绑定微软帐号有着这些好处：</p>
 <ul>
@@ -261,11 +272,75 @@ https://github.com/alex-shpak/hugo-book
 <p>在某些极端情况下，这个芯片可能产生「误判」。一旦它认为启动环境不安全，就会拦截启动过程，不再向系统通报密钥。这时你将会在开机时卡在这个画面：</p>
 <p><img src="user-and-ms-account/Untitled%205.png" alt="Untitled" /></p>
 <p>可是，我们作为普通用户，从来没见过那 48 位长的「密钥」的真面目啊。这时，如果你使用过微软帐号来登录系统，那么你不必担心找不到这个密钥，微软会自动帮你把它备份到云端。你只需要打开 <a href="https://account.microsoft.com/devices/recoverykey">https://account.microsoft.com/devices/recoverykey</a> 这个链接，按提示登录微软帐号，即可找到自己设备的 48 位密钥。<del>虽然但是，谁愿意手打 48 位密钥啊。</del></p>
-<p><img src="user-and-ms-account/Bitlocker_Unfinished.png" alt="Bitlocker_Unfinished" /></p>
+<p><img src="user-and-ms-account/Bitlocker_Unfinished.png#center" alt="Bitlocker_Unfinished" /></p>
 <p>如果你在新机配置时没有登录微软账号，电脑上的设备加密可能会处于「还差最后一块拼图」的状态，此时的磁盘图标会出现上图那样的黄色警告标志。而打开【设置】→【更新和安全】→【设备加密】，则会看到「你需要 Microsoft 帐户才能完成此设备的加密」的警告信息。</p>
 <p><img src="user-and-ms-account/Bitlocker_Info.png" alt="Bitlocker_Info" /></p>
 <p>没错，这「最后一块拼图」就是将本地账户连接到微软账号。但此时系统整体的加密工作其实已经完成了，也就意味着电脑在使用时依然有概率陷入「输入恢复密钥」的尴尬场面。但因为你的账户不是微软账号，也就无从查找那「恢复密钥」，而设备加密采用的加密算法非常复杂，基本不可能硬破解，这时我们就只能尝试多次重启、排查造成芯片认为不安全的因素来尝试进入系统了。</p>
 <p><strong>所以，如果你的电脑启用了设备加密，请务必将本地帐户连接到微软帐号！</strong></p>
+<h2 id="更改用户文件夹名-">
+  更改用户文件夹名 *
+  <a class="anchor" href="#%e6%9b%b4%e6%94%b9%e7%94%a8%e6%88%b7%e6%96%87%e4%bb%b6%e5%a4%b9%e5%90%8d-">#</a>
+</h2>
+<p>众……可能不所周知，部分软件（尤其是国外软件）无法正确处理带有中文等字符的路径，导致当账户名存在中文等字符时无法正常工作。或者，你想改掉当初直接登录微软账户留下来的难看用户文件夹名。但是，即便你在【控制面板】→【用户帐户】中改掉你的账户名称，也不会改变账户建立之初就确定下来的用户文件夹名，此时，我们需要额外的操作来更改用户文件夹名。</p>
+<p><img src="user-and-ms-account/Unchanged_User_Folder.png#center" alt="Unchanged User Folder" /></p>
+<p>在着手操作之前。请<strong>一定确保电脑上没有在运行或自动运行的任何云存储服务</strong>（包括但不限于 OneDrive、iCloud、百度网盘等），如果有，请预先停止自动同步或关闭自动启动。</p>
+<p>接下来，开始操作！</p>
+<h3 id="获取当前用户的-sid">
+  获取当前用户的 SID
+  <a class="anchor" href="#%e8%8e%b7%e5%8f%96%e5%bd%93%e5%89%8d%e7%94%a8%e6%88%b7%e7%9a%84-sid">#</a>
+</h3>
+<p>SID，即「安全标识符」（security identifier），用于在操作系统中唯一地标识安全主体或安全组。所谓「安全主体」和「安全组」包括了用户、组和计算机账户，换言之，SID 就是操作系统给这台电脑上的所有用户派发的「身份证」，靠着这个「身份证」，操作系统才能识别用户、准许用户访问自己的资源。</p>
+<p>既然我们想改变自己用户的信息，那么很显然记下当前用户的 SID 是非常有必要的。按下 <code>Windows</code> + <code>X</code>，选择【终端】或【PowerShell】，输入 <code>whoami /user</code>，回车，即可看到当前用户的 SID。SID 是随机生成的，所以要是看到和下图一样的，不妨去买张彩票？
+<img src="user-and-ms-account/Get_SID.png" alt="Get_SID" /></p>
+<h3 id="新建一个管理员账户">
+  新建一个管理员账户
+  <a class="anchor" href="#%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aa%e7%ae%a1%e7%90%86%e5%91%98%e8%b4%a6%e6%88%b7">#</a>
+</h3>
+<p>转到设置 →【帐户】→【其他用户】，点击【添加帐户】，在弹出的窗口中依次点击【我没有这个人的登录信息】【同意并继续】【添加一个没有 Microsoft 帐户的用户】，然后输入你想要的用户名。
+<img src="user-and-ms-account/New_User.png#center" alt="New User" /></p>
+<p>默认情形下，新建的用户会是「标准用户」，即没有管理员权限，所以接下来我们要把它改成管理员用户。点击用户列表中刚刚新建的用户，点击【更改帐户类型】，改成「管理员」即可。
+<img src="user-and-ms-account/Change_User_Type.png#center" alt="Change User Type" /></p>
+<h3 id="在新管理员账户下操作原账户的文件夹">
+  在新管理员账户下操作原账户的文件夹
+  <a class="anchor" href="#%e5%9c%a8%e6%96%b0%e7%ae%a1%e7%90%86%e5%91%98%e8%b4%a6%e6%88%b7%e4%b8%8b%e6%93%8d%e4%bd%9c%e5%8e%9f%e8%b4%a6%e6%88%b7%e7%9a%84%e6%96%87%e4%bb%b6%e5%a4%b9">#</a>
+</h3>
+<p>注销（事实上是登出）当前账户，切换到新的管理员账户登录。打开任务管理器，切换到【用户】选项卡，<strong>确保那里面只显示当前登录的账户</strong>，若原来的账户还在，则需要重新登回去，确保注销。
+<img src="user-and-ms-account/Users_In_Tskmgr.png#center" alt="User In Tskmgr" /></p>
+<p>确定只有新账户后，打开资源管理器，转到 <code>C:\用户\</code> 下，更改原来的账户文件夹名称为你想要的名字。好，我们有了一大进步！
+<img src="user-and-ms-account/Change_User_Folder_Name.png#center" alt="Change_User_Folder_Name" /></p>
+<h3 id="修改注册表以匹配新名字">
+  修改注册表以匹配新名字
+  <a class="anchor" href="#%e4%bf%ae%e6%94%b9%e6%b3%a8%e5%86%8c%e8%a1%a8%e4%bb%a5%e5%8c%b9%e9%85%8d%e6%96%b0%e5%90%8d%e5%ad%97">#</a>
+</h3>
+<blockquote class="book-hint danger">
+  <strong>警告</strong>：这一步需要非常细心的操作，一定不能出错！
+</blockquote>
+
+<p>按下 <code>Windows</code> + <code>R</code>，输入 <code>regedit</code>，确定，打开注册表编辑器，转到以下地址（你也可以把这一行复制粘贴到注册表编辑器的地址栏去）：</p>
+<pre tabindex="0"><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+</code></pre><p>接下来是当初记下的 SID 的用武之地了，在左侧 <code>ProfileList</code> 文件夹下找到第 1 步记下的 SID，点进去，可见右侧 <code>ProfileImagePath</code> 一项正是你原来的用户文件夹路径，<strong>先记下来，下一步要用</strong>。将它的尾部你原来用户文件夹名的部分改成新文件夹名即可。
+<img src="user-and-ms-account/Change_Reg.png" alt="Change Reg" /></p>
+<h3 id="建立新旧用户文件夹间的符号链接">
+  建立新旧用户文件夹间的符号链接
+  <a class="anchor" href="#%e5%bb%ba%e7%ab%8b%e6%96%b0%e6%97%a7%e7%94%a8%e6%88%b7%e6%96%87%e4%bb%b6%e5%a4%b9%e9%97%b4%e7%9a%84%e7%ac%a6%e5%8f%b7%e9%93%be%e6%8e%a5">#</a>
+</h3>
+<blockquote class="book-hint danger">
+  <strong>警告</strong>：这一步也是重中之重，一定不能出错！
+</blockquote>
+
+<p>符号链接相当于通用的「快捷方式」，访问符号链接就相当于访问它指向的目标，欲了解更多，可以阅读 <a href="https://www.criwits.top/missing/manage-storage.html#影分身文件链接">成为空间管理大师</a> 一章。所以，建立符号链接的目的就是让那些已有的软件在照旧访问原来的用户文件夹时能够访问到修改后的位置。</p>
+<p>按下 <code>Windows + X</code>，点选【终端管理员】或【PowerShell（管理员）】等类似选项，用管理员权限来启动命令窗口。输入 <code>cmd</code> 进入命令提示符<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>，输入</p>
+<pre tabindex="0"><code>mklink /d &lt;旧用户文件夹路径&gt; &lt;新用户文件夹路径&gt;
+</code></pre><p>譬如在本节插图中的情形下，就输入</p>
+<pre tabindex="0"><code>mklink /d C:\Users\Windy C:\Users\Ventus
+</code></pre><p>回车，你就可以在 <code>C:\用户\</code> 下看到符号链接了。如果它提示「已存在」，那肯定是你忘记重命名了。</p>
+<h3 id="尾声">
+  尾声
+  <a class="anchor" href="#%e5%b0%be%e5%a3%b0">#</a>
+</h3>
+<p>至此，我们要做的工作已经尽数完成，可以继续使用原本的账户了。虽然可能有部分软件中仍然显示着曾经的用户文件夹路径，但不必担心，我们不是建立了符号链接吗？脑海中「翻译」一下就好啦。</p>
+<p>不过，仍然有一些事情可能需要我们处理。如果你照 <a href="https://www.criwits.top/missing/file-and-file-management.html#更改用户文件夹的存储位置-">文件与文件管理</a> 中更改了用户文件夹的存储位置，那么，你可能会发现自己的文件不见了，这是因为系统没有为新的用户文件夹路径记录存储位置。虽说文件还在之前改过的存储位置那里放着，但还是需要重新操作一遍更改。</p>
+<p><del>以及，你没法建立一个与原用户相同名称的新用户了。</del></p>
 <h2 id="练习">
   练习
   <a class="anchor" href="#%e7%bb%83%e4%b9%a0">#</a>
@@ -279,10 +354,16 @@ https://github.com/alex-shpak/hugo-book
 <hr>
 <ol>
 <li id="fn:1">
-<p>如果你在第一次开机时直接登录了微软帐号，那么系统会先用你的微软帐号的前 5 位作为用户名新建一个本地帐户~~，然后你就会发现一个巨难看的本地用户名~~，然后迅速将它连接到你的微软帐号（参见后文）。整个过程对你来说完全无感。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>注意，由于微软的疏忽，Windows 中多用「帐户」一词，然而正确的写法应是「账户」，但本文引用系统中的原始文本时，为忠于原文，未作更改。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>本地存储的用户名是不会因为绑定到微软帐号而改变的。即，绑定前后，打开 <code>C:\用户\</code> 看到的文件夹名字是一样的。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>如果你在第一次开机时直接登录了微软帐号，那么系统会先用你的微软帐号的前 5 位作为用户名新建一个本地帐户 <del>，然后你就会发现一个巨难看的本地用户名</del>，然后迅速将它连接到你的微软帐号（参见后文）。整个过程对你来说完全无感。&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>本地存储的用户名是不会因为绑定到微软帐号而改变的。即，绑定前后，打开 <code>C:\用户\</code> 看到的文件夹名字是一样的。&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>为什么不直接用 Powershell 呢？详见 <a href="https://www.criwits.top/missing/manage-storage.html#影分身文件链接">成为空间管理大师</a> 一章。&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -345,6 +426,16 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#用户与权限以及-administrator">用户与权限，以及 Administrator</a></li>
         <li><a href="#本地帐户和微软账号">本地帐户和微软账号</a></li>
         <li><a href="#设备加密与微软帐号-">设备加密与微软帐号 *</a></li>
+        <li><a href="#更改用户文件夹名-">更改用户文件夹名 *</a>
+          <ul>
+            <li><a href="#获取当前用户的-sid">获取当前用户的 SID</a></li>
+            <li><a href="#新建一个管理员账户">新建一个管理员账户</a></li>
+            <li><a href="#在新管理员账户下操作原账户的文件夹">在新管理员账户下操作原账户的文件夹</a></li>
+            <li><a href="#修改注册表以匹配新名字">修改注册表以匹配新名字</a></li>
+            <li><a href="#建立新旧用户文件夹间的符号链接">建立新旧用户文件夹间的符号链接</a></li>
+            <li><a href="#尾声">尾声</a></li>
+          </ul>
+        </li>
         <li><a href="#练习">练习</a></li>
       </ul>
     </li>
